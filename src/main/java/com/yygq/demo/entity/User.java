@@ -17,8 +17,7 @@ import java.util.Date;
  * @author ame
  * @description: this entity describes user
  */
-@Getter
-@Setter
+
 @Data
 @Table(name = "user")
 public class User implements Serializable {
@@ -65,6 +64,12 @@ public class User implements Serializable {
      */
     @Column(name = "identity_number")
     private String identityNumber;
+
+    /**
+     * real name
+     */
+    @Column(name = "real_name")
+    private String realName;
 
     /**
      * status: -1 means deleted, 0 means banned, 1 means usable
