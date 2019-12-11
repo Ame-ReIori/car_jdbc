@@ -1,0 +1,2 @@
+INSERT INTO `user` (`id`, `username`, `password`, `salt`, `phone_number`, `money`, `email`, `status`, `mac`) VALUES (1, 'ame', '0123456789abcdef', 'fedcba9876543210', '12887329182', '1234567800009', '12312423@gmail.com', 1, '2716382d63f12d31692d321fc');
+INSERT INTO `user` (`id`, `username`, `password`, `salt`, `phone_number`, `money`, `email`, `status`, `mac`) VALUES (2, 'reiori', 'fedcba9876543210', '0123456789abcdef', '12887123182', '0', '121232423@gmail.com', 1, '2714134141412d31692d321fc');

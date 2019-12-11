@@ -1,0 +1,12 @@
+/Users/ame/Desktop/springstu/demo/src/main/java/com/yygq/demo/constant/Const.java
+/Users/ame/Desktop/springstu/demo/src/main/java/com/yygq/demo/controller/UserController.java
+/Users/ame/Desktop/springstu/demo/src/main/java/com/yygq/demo/service/impl/UserServiceImpl.java
+/Users/ame/Desktop/springstu/demo/src/main/java/com/yygq/demo/DemoApplication.java
+/Users/ame/Desktop/springstu/demo/src/main/java/com/yygq/demo/annotation/Pk.java
+/Users/ame/Desktop/springstu/demo/src/main/java/com/yygq/demo/dao/base/BaseDao.java
+/Users/ame/Desktop/springstu/demo/src/main/java/com/yygq/demo/entity/User.java
+/Users/ame/Desktop/springstu/demo/src/main/java/com/yygq/demo/annotation/Ignore.java
+/Users/ame/Desktop/springstu/demo/src/main/java/com/yygq/demo/annotation/Table.java
+/Users/ame/Desktop/springstu/demo/src/main/java/com/yygq/demo/dao/UserDao.java
+/Users/ame/Desktop/springstu/demo/src/main/java/com/yygq/demo/service/UserService.java
+/Users/ame/Desktop/springstu/demo/src/main/java/com/yygq/demo/annotation/Column.java
