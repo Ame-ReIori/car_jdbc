@@ -231,6 +231,12 @@
 								<input type="password" class="form-control" autocomplete="new-password" v-model="register_vinput_pwd" placeholder="确认密码">
 							</div>
 							<div class="form-group">
+								<input type="text" class="form-control" autocomplete="new-password" v-model="register_identity_num" placeholder="身份证号">
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" autocomplete="new-password" v-model="register_real_name" placeholder="真实姓名">
+							</div>
+							<div class="form-group">
 								<input type="text" class="form-control" autocomplete="new-password" v-model="register_mail" placeholder="邮箱">
 							</div>
 							<div class="form-group">
@@ -324,16 +330,20 @@
 			register_input_usr : "",
 			register_input_pwd : "",
 			register_vinput_pwd : "",
+			register_identity_num : "",
+			register_real_name : "",
 			register_mail : "",
 			register_phone : "",
 		},
 		methods:{
 			register: function(){
-				if(this.register_input_usr=="" || this.register_input_pwd=="" || this.register_mail=="" || this.register_phone==""){
+				if(this.register_input_usr=="" || this.register_input_pwd=="" || this.register_mail=="" || this.register_phone=="" || this.register_identity_num=="" || this.register_real_name==""){
 					alert('输入不能为空！')
 				}else if(this.register_input_pwd != this.register_vinput_pwd){
 					alert('两次密码输入不一致！')
 				}else{
+					//用户状态，注册时直接置为1
+					var user_status = 1;
 					//这里的axios的post的地址需要你来改一下，注意注意！
 					alert(this.register_input_usr)
 					alert(this.register_input_pwd)
@@ -342,8 +352,11 @@
 					axios.post('test.php',{
 						username: this.register_input_usr,
 						password: this.register_input_pwd,
+						identity_num: this.register_identity_num,
+						read_name: this.register_real_name,
 						mail: this.register_mail,
-						phone: this.register_phone
+						phone: this.register_phone,
+						user_status : user_status
 					})
 					.then(function (response) {
 						alert(response.data)
@@ -378,10 +391,15 @@
 		},
 		methods:{
 			login: function(){
+				//用户登录的时间
+				var d = new Date();
+				var login_date = d.toUTCString();
+				console.log(login_date);
 				//和上面一样，这里后端需要改一下这个axios的地址
 				axios.post('http://localhost:8080/login',{
 					username: this.login_input_usr,
 					password: this.login_input_pwd,
+					login_date: login_date
 				})
 				.then(response => {
 					/*注意一下这里登录后，如果登录不成功，返回json{code:'1'}即可，
