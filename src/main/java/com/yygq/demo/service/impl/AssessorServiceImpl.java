@@ -25,6 +25,7 @@ public class AssessorServiceImpl implements AssessorService {
     private final AssessorDao assessorDao;
 
     @Autowired
+
     public AssessorServiceImpl(AssessorDao assessorDao){
         this.assessorDao = assessorDao;
     }

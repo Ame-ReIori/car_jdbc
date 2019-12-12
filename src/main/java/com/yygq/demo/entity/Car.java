@@ -61,6 +61,11 @@ public class Car {
     private Long price;
 
     /**
+     * car status
+     */
+    private String status;
+
+    /**
      * transfer times
      */
     @Column(name = "transfer_time")

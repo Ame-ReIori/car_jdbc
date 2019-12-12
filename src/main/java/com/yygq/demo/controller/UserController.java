@@ -1,6 +1,8 @@
 package com.yygq.demo.controller;
 
 import cn.hutool.core.lang.Dict;
+import com.yygq.demo.entity.Assessor;
+import com.yygq.demo.service.AssessorService;
 import com.yygq.demo.service.UserService;
 import com.yygq.demo.entity.User;
 import lombok.extern.slf4j.Slf4j;
