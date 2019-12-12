@@ -61,7 +61,7 @@
   	<div class="row div_function">
   		<div class="col-xs-4">
   			<div class="panel panel-default" id="pFunc1">
-  				<div class="panel-body">
+  				<div class="panel-body" style="cursor: pointer;">
   					<strong><p class='panel_p'>汽车店铺</p></strong>
   					<img class="iv_function" src="img/buycar.png">
   				</div>
@@ -69,7 +69,7 @@
   		</div>
   		<div class="col-xs-4">
   			<div class="panel panel-default"  id="pFunc2">
-  				<div class="panel-body">
+  				<div class="panel-body" style="cursor: pointer;">
   					<strong><p class='panel_p'>查看订单</p></strong>
   					<img class="iv_function" src="img/user_order.png">
   				</div>
@@ -77,7 +77,7 @@
   		</div>
   		<div class="col-xs-4">
   			<div class="panel panel-default"  id="pFunc3">
-  				<div class="panel-body">
+  				<div class="panel-body" style="cursor: pointer;">
   					<strong><p class='panel_p'>个人信息</p></strong>
   					<img class="iv_function" src="img/user_info.png">
   				</div>
@@ -103,7 +103,7 @@
   							<div class="div_center col-xs-9">
   								<div class="lpist-group-item-heading div_article_title">
   									<strong>
-  										<a href="#">{{car_model1}}</a>
+  										<a href="html/carinfo.html">{{car_model1}}</a>
   									</strong>
   								</div>
   								<p class="list-group-item-text div_article_content">
@@ -122,7 +122,7 @@
 							<div class="div_center col-xs-9">
 								<div class="lpist-group-item-heading div_article_title">
 									<strong>
-										<a href="#">{{car_model2}}</a>
+										<a href="html/carinfo.html">{{car_model2}}</a>
 									</strong>
 								</div>
 								<p class="list-group-item-text div_article_content">
@@ -141,7 +141,7 @@
 							<div class="div_center col-xs-9">
 								<div class="lpist-group-item-heading div_article_title">
 									<strong>
-										<a href="#">{{car_model3}}</a>
+										<a href="html/carinfo.html">{{car_model3}}</a>
 									</strong>
 								</div>
 								<p class="list-group-item-text div_article_content">
@@ -161,7 +161,7 @@
 								<div class="div_center col-xs-9">
 									<div class="lpist-group-item-heading div_article_title">
 										<strong>
-											<a href="#">{{car_model4}}</a>
+											<a href="html/carinfo.html">{{car_model4}}</a>
 										</strong>
 									</div>
 									<p class="list-group-item-text div_article_content">
@@ -278,7 +278,7 @@
   		
   	</div>
 </body>
-<!--<script src="js/util.js"></script>-->
+<script src="js/util.js"></script>
 <script>
 	/*下面这个实例是页面左边的车辆信息的实例，*/
 	var vm_carinfo = new Vue({
@@ -345,10 +345,6 @@
 					//用户状态，注册时直接置为1
 					var user_status = 1;
 					//这里的axios的post的地址需要你来改一下，注意注意！
-					alert(this.register_input_usr)
-					alert(this.register_input_pwd)
-					alert(this.register_mail)
-					alert(this.register_phone)
 					axios.post('test.php',{
 						username: this.register_input_usr,
 						password: this.register_input_pwd,
@@ -359,8 +355,7 @@
 						user_status : user_status
 					})
 					.then(function (response) {
-						alert(response.data)
-						//我偏就不要在这里设置sessionstorage
+						//我偏就不要在这里设置cookie
 						var response_num = response.data
 						//后端返回1表示用户名已经存在，如果返回0就表示注册成功
 						if(response_num == 1){
@@ -396,7 +391,7 @@
 				var login_date = d.toUTCString();
 				console.log(login_date);
 				//和上面一样，这里后端需要改一下这个axios的地址
-				axios.post('http://localhost:8080/login',{
+				axios.post('test3.php',{
 					username: this.login_input_usr,
 					password: this.login_input_pwd,
 					login_date: login_date
@@ -462,6 +457,19 @@
 		}
 	})
 
+	//页面跳转
+	$('#pFunc1').on('click', function(){
+		//这个地址后端要改的
+		window.location.href = "index.html";
+	});
+	$('#pFunc2').on('click', function(){
+		//这个地址后端要改的
+		window.location.href = "index.html";
+	});
+	$('#pFunc3').on('click', function(){
+		//这个地址后端要改的
+		window.location.href = "index.html";
+	});
 
 </script>
 </html>
