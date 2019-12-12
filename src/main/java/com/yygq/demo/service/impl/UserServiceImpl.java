@@ -12,6 +12,7 @@ import com.yygq.demo.service.UserService;
 import com.yygq.demo.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 
 import java.util.List;
 
@@ -37,7 +38,7 @@ public class UserServiceImpl implements UserService {
      */
     @Override
     public Boolean insert(User user){
-        System.out.println("insert");
+        System.out.println(user);
         String temp = user.getPassword();
         String salt = IdUtil.simpleUUID();
         String pass = SecureUtil.sha256(temp + Const.SALT_PREFIX + salt);
@@ -75,10 +76,11 @@ public class UserServiceImpl implements UserService {
     @Override
     public Boolean update(User user, Long id){
         User exist = getUser(id);
+
         if(StrUtil.isNotBlank(user.getPassword())){
-            String temp = user.getPassword();
+            String tmp = user.getPassword();
             String salt = IdUtil.simpleUUID();
-            String pass = SecureUtil.sha256(temp + Const.SALT_PREFIX + salt);
+            String pass = SecureUtil.sha256(tmp + Const.SALT_PREFIX + salt);
             user.setPassword(pass);
             user.setSalt(salt);
 
@@ -92,7 +94,7 @@ public class UserServiceImpl implements UserService {
         }
         BeanUtil.copyProperties(user, exist, CopyOptions.create().setIgnoreNullValue(true));
         exist.setLastUpdateTime(new DateTime());
-        return userDao.update(user, id) > 0;
+        return userDao.update(exist, id) > 0;
     }
 
     /**
@@ -129,7 +131,4 @@ public class UserServiceImpl implements UserService {
         System.out.println("get all users");
         return userDao.selectAllUser();
     }
-
-
-
 }

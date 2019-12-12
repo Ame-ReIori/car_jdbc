@@ -1,5 +1,6 @@
 package com.yygq.demo.entity;
 
+import com.yygq.demo.annotation.Column;
 import com.yygq.demo.annotation.Pk;
 import com.yygq.demo.annotation.Table;
 import lombok.Data;
@@ -18,16 +19,19 @@ public class Order {
     /**
      * create time
      */
+    @Column(name = "create_time")
     private Date createTime;
 
     /**
      * the id of customer
      */
+    @Column(name = "customer_id")
     private Long customerId;
 
     /**
      * the id of seller
      */
+    @Column(name = "seller_id")
     private Long sellerId;
 
     /**

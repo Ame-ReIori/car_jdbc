@@ -1,5 +1,6 @@
 package com.yygq.demo.entity;
 
+import com.yygq.demo.annotation.Column;
 import com.yygq.demo.annotation.Pk;
 import com.yygq.demo.annotation.Table;
 import lombok.Data;
@@ -21,30 +22,38 @@ public class Car {
     /**
      * image's url
      */
+    @Column(name = "img_url")
     private String imgUrl;
 
     /**
      * detail images' url
      */
+    @Column(name = "detail_img_url_0")
     private String detailImgUrl0;
+    @Column(name = "detail_img_url_1")
     private String detailImgUrl1;
+    @Column(name = "detail_img_url_2")
     private String detailImgUrl2;
+    @Column(name = "detail_img_url_3")
     private String detailImgUrl3;
 
     /**
      * type of car
      */
+    @Column(name = "car_type")
     private String carType;
 
     /**
      * the owner of car
      */
-    private Long owner_id;
+    @Column(name = "owner_id")
+    private Long ownerId;
 
     /**
      * the phone of owner
      */
-    private String owner_phone;
+    @Column(name = "owner_phone")
+    private String ownerPhone;
 
     /**
      * price
@@ -54,5 +63,6 @@ public class Car {
     /**
      * transfer times
      */
+    @Column(name = "transfer_time")
     private Long transferTime;
 }
