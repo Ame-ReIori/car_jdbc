@@ -12,7 +12,7 @@ public class CarAssessment {
      * id
      */
     @Pk
-    private String id;
+    private Long id;
 
     /**
      * the id of assessment

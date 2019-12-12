@@ -40,6 +40,11 @@ public class Order {
     private Long price;
 
     /**
+     * car id
+     */
+    @Column(name = "car_id")
+    private Long catId;
+    /**
      * status of order
      */
     private String status;

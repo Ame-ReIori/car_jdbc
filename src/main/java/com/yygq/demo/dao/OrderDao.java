@@ -38,7 +38,7 @@ public class OrderDao extends BaseDao<Order, String> {
         return super.queryByExample(order);
     }
 
-    public List<Order> selectAll(){
+    public List<Order> selectAllOrder(){
         return super.queryAll();
     }
 }

@@ -4,6 +4,7 @@ import com.yygq.demo.dao.base.BaseDao;
 import com.yygq.demo.entity.CarAssessment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -11,7 +12,7 @@ import java.util.List;
  * car assessment dao
  * @author ame
  */
-public class CarAssessmentDao extends BaseDao<CarAssessment, String> {
+public class CarAssessmentDao extends BaseDao<CarAssessment, Long> {
 
     @Autowired
     public CarAssessmentDao(JdbcTemplate jdbcTemplate){
@@ -22,15 +23,15 @@ public class CarAssessmentDao extends BaseDao<CarAssessment, String> {
         return super.insert(carAssessment, true);
     }
 
-    public Integer delete(String id){
+    public Integer delete(Long id){
         return super.deleteById(id);
     }
 
-    public Integer update(CarAssessment carAssessment, String id){
+    public Integer update(CarAssessment carAssessment, Long id){
         return super.updateById(carAssessment, id, true);
     }
 
-    public CarAssessment selectById(String id){
+    public CarAssessment selectById(Long id){
         return super.queryOneById(id);
     }
 
@@ -38,7 +39,7 @@ public class CarAssessmentDao extends BaseDao<CarAssessment, String> {
         return super.queryByExample(carAssessment);
     }
 
-    public List<CarAssessment> selectAll(){
+    public List<CarAssessment> selectAllCarAssessment(){
         return super.queryAll();
     }
 
