@@ -7,46 +7,54 @@ import lombok.Data;
 
 import java.util.Date;
 
+/**
+ * insurance entity
+ *
+ * @author ame
+ */
 @Data
-@Table(name = "insurance")
+@Table(name = "INSURANCE_TABLE")
 public class Insurance {
     /**
      * id
      */
     @Pk
-    private String id;
+    @Column(name = "INSURE_ID")
+    private String insureId;
 
     /**
      * company
      */
+    @Column(name = "G_COMPANY")
     private String company;
+
+    /**
+     * the type of insurance
+     */
+    @Column(name = "INSURE_TYPECODE")
+    private String insureType;
 
     /**
      * the id of car
      */
-    @Column(name = "car_id")
+    @Column(name = "CAR_ID")
     private Long carId;
 
     /**
      * the id of owner
      */
-    @Column(name = "owner_id")
+    @Column(name = "OWNER_ID")
     private Long ownerId;
 
     /**
      * insurance time
      */
-    @Column(name = "insure_time")
+    @Column(name = "INSURE_TIME")
     private Date insureTime;
-
-    /**
-     * the type of insurance
-     */
-    @Column(name = "insure_type")
-    private String insureType;
 
     /**
      * ddl
      */
+    @Column(name = "DEADLINE")
     private Date ddl;
 }

@@ -7,45 +7,55 @@ import lombok.Data;
 
 import java.util.Date;
 
+/**
+ * order entity
+ *
+ * @author ame
+ */
 @Data
-@Table(name = "order")
+@Table(name = "ORDER_TABLE")
 public class Order {
     /**
      * id
      */
     @Pk
-    private String id;
+    @Column(name = "ORDER_ID")
+    private String orderId;
 
     /**
      * create time
      */
-    @Column(name = "create_time")
+    @Column(name = "CREATED_TIME")
     private Date createTime;
+
+    /**
+     * car id
+     */
+    @Column(name = "CAR_ID")
+    private Long catId;
 
     /**
      * the id of customer
      */
-    @Column(name = "customer_id")
+    @Column(name = "CUSTOMER_ID")
     private Long customerId;
 
     /**
      * the id of seller
      */
-    @Column(name = "seller_id")
+    @Column(name = "SALER_ID")
     private Long sellerId;
 
     /**
      * deal price
      */
+    @Column(name = "DEAL_PRICE")
     private Long price;
 
-    /**
-     * car id
-     */
-    @Column(name = "car_id")
-    private Long catId;
+
     /**
      * status of order
      */
+    @Column(name = "ORDER_STATE")
     private String status;
 }

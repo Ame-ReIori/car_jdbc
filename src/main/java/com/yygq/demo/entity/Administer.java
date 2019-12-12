@@ -4,39 +4,32 @@ import com.yygq.demo.annotation.Column;
 import com.yygq.demo.annotation.Pk;
 import com.yygq.demo.annotation.Table;
 import lombok.Data;
-import com.alibaba.fastjson.annotation.JSONField;
-import lombok.Getter;
-import lombok.Setter;
-import org.springframework.beans.factory.annotation.Autowired;
 
-import java.io.Serializable;
 import java.util.Date;
 
 /**
- * user entity
+ * administer entity
+ *
  * @author ame
- * @description: this entity describes user
  */
-
 @Data
-@Table(name = "USER_TABLE")
-public class User implements Serializable {
+@Table(name = "ADMIN_TABLE")
+public class Administer {
     /**
-     * primary key
-     * auto-increase
+     * id
      */
     @Pk
-    @Column(name = "USER_ID")
-    private Long userId;
+    @Column(name = "ADMIN_ID")
+    private Long adminId;
 
     /**
-     * username
+     * admin's name
      */
     @Column(name = "NAME")
     private String username;
 
     /**
-     * password encrypted
+     * admin's pw
      */
     @Column(name = "PASSWORD")
     private String password;
@@ -44,26 +37,14 @@ public class User implements Serializable {
     /**
      * salt
      */
-    @Column(name = "SALT")
+    @Column(name = "salt")
     private String salt;
 
     /**
      * phone
      */
     @Column(name = "PHONE")
-    private String phoneNumber;
-
-    /**
-     * money
-     */
-    @Column(name = "MONEY")
-    private Long money;
-
-    /**
-     * email
-     */
-    @Column(name = "EMAIL")
-    private String email;
+    private String phone;
 
     /**
      * identity number
@@ -78,10 +59,10 @@ public class User implements Serializable {
     private String realName;
 
     /**
-     * status: -1 means deleted, 0 means banned, 1 means usable
+     * email
      */
-    @Column(name = "STATUS")
-    private Integer status;
+    @Column(name = "EMAIL")
+    private String email;
 
     /**
      * create time
@@ -90,7 +71,7 @@ public class User implements Serializable {
     private Date createTime;
 
     /**
-     * last log in time
+     * last login time
      */
     @Column(name = "LAST_LOGIN_TIME")
     private Date lastLoginTime;
@@ -112,5 +93,4 @@ public class User implements Serializable {
      */
     @Column(name = "AVATAR")
     private String avatar;
-
 }

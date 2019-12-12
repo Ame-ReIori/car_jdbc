@@ -5,54 +5,60 @@ import com.yygq.demo.annotation.Pk;
 import com.yygq.demo.annotation.Table;
 import lombok.Data;
 
+/**
+ * car assessment entity
+ *
+ * @author ame
+ */
 @Data
-@Table(name = "car_assessment")
+@Table(name = "CAR_DETECTION_TABLE")
 public class CarAssessment {
     /**
      * id
      */
     @Pk
-    private Long id;
+    @Column(name = "CAR_ID")
+    private Long carId;
 
     /**
      * the id of assessment
      */
-    @Column(name = "assessment_id")
+    @Column(name = "ASSESSOR_ID")
     private Long assessmentId;
 
     /**
      * the id of admin
      */
-    @Column(name = "admin_id")
+    @Column(name = "ADMIN_ID")
     private Long adminId;
 
     /**
      * the status of some parts
      */
-    @Column(name = "engine_status")
+    @Column(name = "ENGINE")
     private String engineStatus;
 
-    @Column(name = "window_status")
+    @Column(name = "WINDOWS")
     private String windowStatus;
 
-    @Column(name = "wheel_status")
+    @Column(name = "WHEELS")
     private String wheelStatus;
 
-    @Column(name = "collision_status")
+    @Column(name = "COLLISION")
     private String collisionStatus;
 
-    @Column(name = "light_status")
+    @Column(name = "LIGHTS")
     private String lightStatus;
 
-    @Column(name = "appearance_status")
+    @Column(name = "APPEARANCE")
     private String appearanceStatus;
 
-    @Column(name = "dashboard_status")
+    @Column(name = "DASHBOARD")
     private String dashboardStatus;
 
-    @Column(name = "chassis status")
+    @Column(name = "CHASSIS")
     private String chassisStatus;
 
-    @Column(name = "sec_sys_status")
+    @Column(name = "SECURITY_SYSTEM")
     private String secSysStatus;
 }
