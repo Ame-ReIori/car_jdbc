@@ -31,15 +31,22 @@ public class UserController {
         return "test succeed";
     }
 
-    @PostMapping(value = "/user")
-    public Dict insert(@RequestBody User user){
-        System.out.println("insert");
+    @RequestMapping(value = "/test/insert")
+    public Dict insert(@RequestParam(value = "username")String username, @RequestParam(value = "password")String password, @RequestParam(value = "phonenumber")String phonenumber, @RequestParam(value = "identitynumber")String identitynumber){
+        User user = new User();
+        user.setUsername(username);
+        user.setPassword(password);
+        user.setPhoneNumber(phonenumber);
+        user.setIdentityNumber(identitynumber);
+        user.setMoney(0L);
+
         Boolean insert = userService.insert(user);
         return Dict.create().set("code", insert ? 200 : 500).set("msg", insert ? "success" : "failure").set("data", insert ? user : null);
     }
 
-    @DeleteMapping(value = "/user/{id}")
-    public Dict delete(@PathVariable Long id){
+    @RequestMapping(value = "/test/delete")
+    public Dict delete(@RequestParam(value = "id")Long id){
+        System.out.println(id);
         Boolean delete = userService.delete(id);
         return Dict.create().set("code", delete ? 200 : 500).set("msg", delete ? "success" : "failure");
     }
@@ -55,8 +62,12 @@ public class UserController {
         return "0";
     }
 
-    @PutMapping(value = "/user/{id}")
-    public Dict update(@RequestBody User user, @PathVariable Long id){
+    @RequestMapping(value = "/test/update")
+    public Dict update(@RequestParam(value = "username")String username, @RequestParam(value = "id")Long id){
+        User user = new User();
+
+        user.setUsername(username);
+
         Boolean update = userService.update(user, id);
         return Dict.create().set("code", update ? 200 : 500).set("msg", update ? "success" : "failure").set("data", update ? user : null);
     }
@@ -73,8 +84,10 @@ public class UserController {
         return Dict.create().set("code", 200).set("msg", "success").set("data", userList);
     }
 
-    @GetMapping(value = "/user/usersample")
-    public Dict getUsers(User user){
+    @RequestMapping("/getusertest")
+    public Dict getUsers(@RequestParam(value = "username")String username){
+        User user = new User();
+        user.setUsername(username);
         List<User> userList = userService.getUsers(user);
         return Dict.create().set("code", 200).set("msg", "success").set("data", userList);
     }
