@@ -1,4 +1,4 @@
-package com.yygaq.demo.dao;
+package com.yygq.demo.dao;
 
 import com.yygq.demo.dao.base.BaseDao;
 import com.yygq.demo.entity.Assessor;
