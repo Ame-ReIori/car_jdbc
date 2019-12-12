@@ -4,6 +4,7 @@ import com.yygq.demo.dao.base.BaseDao;
 import com.yygq.demo.entity.Car;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -12,6 +13,7 @@ import java.util.List;
  * car dao
  * @author ame
  */
+@Repository
 public class CarDao extends BaseDao<Car, Long> {
 
     @Autowired
