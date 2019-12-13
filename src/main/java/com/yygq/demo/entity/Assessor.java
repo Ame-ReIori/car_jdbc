@@ -24,7 +24,7 @@ public class Assessor {
      * real name
      */
     @Column(name = "NAME")
-    private String realName;
+    private String name;
 
     /**
      * password
@@ -42,7 +42,7 @@ public class Assessor {
      * phone number
      */
     @Column(name = "PHONE")
-    private String phoneNumber;
+    private String phone;
 
     /**
      * level

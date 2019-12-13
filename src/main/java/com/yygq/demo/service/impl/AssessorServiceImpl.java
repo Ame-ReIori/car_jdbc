@@ -32,11 +32,17 @@ public class AssessorServiceImpl implements AssessorService {
 
     @Override
     public Boolean insert(Assessor assessor){
+        String identityNumberDigest = null;
         String tmp = assessor.getPassword();
         String salt = IdUtil.simpleUUID();
         String pass = SecureUtil.sha256(tmp + Const.SALT_PREFIX + salt);
         assessor.setPassword(pass);
         assessor.setSalt(salt);
+
+        if(StrUtil.isNotBlank(assessor.getIdentityNumber())){
+            identityNumberDigest = SecureUtil.sha256(assessor.getIdentityNumber());
+            assessor.setIdentityNumber(identityNumberDigest);
+        }
 
         return assessorDao.insert(assessor) > 0;
     }

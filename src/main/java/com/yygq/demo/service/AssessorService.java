@@ -14,6 +14,8 @@ public interface AssessorService {
 
     /**
      * insert
+     * need real_name, password, phone. these are definitely needed from web
+     * and when web interacts with this program, you should fill level field by initial level or other level.
      * @param assessor
      * @return succeed {@code true} failure {@code false}
      */

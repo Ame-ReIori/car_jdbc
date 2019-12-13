@@ -36,5 +36,6 @@ spring:
       max-lifetime: 60000
       connection-timeout: 30000
 logging:
+  file: debug.log
   level:
-    com.xkcoding: info
+    com.yygq.demo: debug

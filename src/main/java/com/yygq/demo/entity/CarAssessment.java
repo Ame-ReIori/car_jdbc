@@ -36,29 +36,29 @@ public class CarAssessment {
      * the status of some parts
      */
     @Column(name = "ENGINE")
-    private String engineStatus;
+    private String engine;
 
     @Column(name = "WINDOWS")
-    private String windowStatus;
+    private String window;
 
     @Column(name = "WHEELS")
-    private String wheelStatus;
+    private String wheel;
 
     @Column(name = "COLLISION")
-    private String collisionStatus;
+    private String collision;
 
     @Column(name = "LIGHTS")
-    private String lightStatus;
+    private String light;
 
     @Column(name = "APPEARANCE")
-    private String appearanceStatus;
+    private String appearance;
 
     @Column(name = "DASHBOARD")
-    private String dashboardStatus;
+    private String dashboard;
 
     @Column(name = "CHASSIS")
-    private String chassisStatus;
+    private String chassis;
 
     @Column(name = "SECURITY_SYSTEM")
-    private String secSysStatus;
+    private String securitySystem;
 }

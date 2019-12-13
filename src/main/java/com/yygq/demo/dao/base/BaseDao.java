@@ -159,6 +159,7 @@ public class BaseDao<T, P> {
      */
     protected List<T> queryAll(){
         String table = getTableName();
+        System.out.println(table);
 
         String sql = StrUtil.format("SELECT * FROM {table} WHERE 1 = 1", Dict.create().set("table", table));
 
@@ -168,7 +169,7 @@ public class BaseDao<T, P> {
 
         List<T> ret = CollUtil.newArrayList();
 
-        maps.forEach(map -> ret.add(BeanUtil.fillBeanWithMap(map, ReflectUtil.newInstance(clazz), true, false)));
+        maps.forEach(map -> ret.add(BeanUtil.fillBeanWithMap(map, ReflectUtil.newInstance(clazz), false, false)));
         return ret;
     }
 

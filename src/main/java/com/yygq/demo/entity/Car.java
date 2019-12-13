@@ -26,19 +26,19 @@ public class Car {
      * image's url
      */
     @Column(name = "PICTURE")
-    private String imgUrl;
+    private String picture;
 
     /**
      * detail images' url
      */
     @Column(name = "DETAIL_IMAGE1")
-    private String detailImgUrl0;
+    private String detailImage1;
     @Column(name = "DETAIL_IMAGE2")
-    private String detailImgUrl1;
+    private String detailImage2;
     @Column(name = "DETAIL_IMAGE3")
-    private String detailImgUrl2;
+    private String detailImage3;
     @Column(name = "DETAIL_IMAGE4")
-    private String detailImgUrl3;
+    private String detailImage4;
 
     /**
      * type of car
@@ -56,7 +56,7 @@ public class Car {
      * the phone of owner
      */
     @Column(name = "OWNER_TEL")
-    private String ownerPhone;
+    private String ownerTel;
 
     /**
      * price

@@ -13,14 +13,13 @@ import java.util.List;
 public interface OrderService {
 
     /**
-     * insert order.
-     * the param is different from other service
-     * the reason is that we can just construct an order through car and users and need no other information
-     * @param car
-     * @param user
+     * insert order
+     * need car_id, customer_id, saler_id(i don't known why it is saler not seller...) and deal_price to fill order
+     * order_id, create_time and order_state will be filled in the program
+     * @param order
      * @return succeed {@code true} failure {@code false}
      */
-    Boolean insert(Car car, User user);
+    Boolean insert(Order order);
 
     /**
      * delete by id

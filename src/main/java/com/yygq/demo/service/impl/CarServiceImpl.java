@@ -27,9 +27,10 @@ public class CarServiceImpl implements CarService {
     }
 
     @Override
-    public Boolean insert(User user, Car car){
-        car.setOwnerId(user.getId());
-        car.setOwnerPhone(user.getPhoneNumber());
+    public Boolean insert(Car car){
+        car.setTransferTime(0);
+        car.setIsAssess(false);
+        car.setIsSold(false);
         return carDao.insert(car) > 0;
     }
 

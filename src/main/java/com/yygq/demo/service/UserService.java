@@ -12,6 +12,8 @@ import java.util.List;
 public interface UserService {
     /**
      * add user
+     * need username, password, phone. these are definitely needed from web
+     * and when web interacts with this program, you should fill money and status with 0 and 1.
      * @param user
      * @return succeed {@code true} failure {@code false}
      */

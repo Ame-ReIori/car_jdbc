@@ -56,5 +56,5 @@ public class Insurance {
      * ddl
      */
     @Column(name = "DEADLINE")
-    private Date ddl;
+    private Date deadline;
 }

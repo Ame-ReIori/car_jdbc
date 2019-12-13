@@ -44,18 +44,18 @@ public class Order {
      * the id of seller
      */
     @Column(name = "SALER_ID")
-    private Long sellerId;
+    private Long salerId;
 
     /**
      * deal price
      */
     @Column(name = "DEAL_PRICE")
-    private Long price;
+    private Long dealPrice;
 
 
     /**
      * status of order
      */
     @Column(name = "ORDER_STATE")
-    private String status;
+    private String orderStatus;
 }

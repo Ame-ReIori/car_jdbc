@@ -36,9 +36,9 @@ public class UserController {
     @RequestMapping(value = "/test/insert")
     public Dict insert(@RequestParam(value = "username")String username, @RequestParam(value = "password")String password, @RequestParam(value = "phonenumber")String phonenumber, @RequestParam(value = "identitynumber")String identitynumber){
         User user = new User();
-        user.setUsername(username);
+        user.setName(username);
         user.setPassword(password);
-        user.setPhoneNumber(phonenumber);
+        user.setPhone(phonenumber);
         user.setIdentityNumber(identitynumber);
         user.setMoney(0L);
 
@@ -48,27 +48,15 @@ public class UserController {
 
     @RequestMapping(value = "/test/delete")
     public Dict delete(@RequestParam(value = "id")Long id){
-        System.out.println(id);
         Boolean delete = userService.delete(id);
         return Dict.create().set("code", delete ? 200 : 500).set("msg", delete ? "success" : "failure");
-    }
-
-    @RequestMapping(value = "/test_login")
-    @ResponseBody
-    public String Test_update(@RequestBody User user){
-        System.out.println(user.getPassword());
-        System.out.println(user.getUsername());
-        long id = 1;
-        Boolean update = userService.update(user, id);
-        System.out.println("get user!");
-        return "0";
     }
 
     @RequestMapping(value = "/test/update")
     public Dict update(@RequestParam(value = "username")String username, @RequestParam(value = "id")Long id){
         User user = new User();
 
-        user.setUsername(username);
+        user.setName(username);
 
         Boolean update = userService.update(user, id);
         return Dict.create().set("code", update ? 200 : 500).set("msg", update ? "success" : "failure").set("data", update ? user : null);
@@ -89,7 +77,7 @@ public class UserController {
     @RequestMapping("/getusertest")
     public Dict getUsers(@RequestParam(value = "username")String username){
         User user = new User();
-        user.setUsername(username);
+        user.setName(username);
         List<User> userList = userService.getUsers(user);
         return Dict.create().set("code", 200).set("msg", "success").set("data", userList);
     }

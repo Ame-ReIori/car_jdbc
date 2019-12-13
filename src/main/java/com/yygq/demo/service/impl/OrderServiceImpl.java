@@ -29,17 +29,12 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public Boolean insert(Car car, User user){
-        Order order = new Order();
+    public Boolean insert(Order order){
+        order.setOrderStatus("0");
         order.setCreateTime(new DateTime());
-        order.setSellerId(car.getOwnerId());
-        order.setCustomerId(user.getId());
-        order.setCatId(car.getId());
-        order.setStatus("0");
-        order.setPrice(car.getPrice());
 
-        String id = SecureUtil.sha256(order.getCreateTime().toString() + order.getCustomerId() + order.getSellerId() + order.getPrice().toString());
-        order.setId(id);
+        String id = SecureUtil.sha256(order.getCreateTime().toString() + order.getCustomerId() + order.getSalerId() + order.getDealPrice().toString());
+        order.setOrderId(id);
         return orderDao.insert(order) > 0;
     }
 

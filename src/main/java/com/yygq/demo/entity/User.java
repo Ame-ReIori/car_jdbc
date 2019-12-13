@@ -29,7 +29,7 @@ public class User implements Serializable {
      * username
      */
     @Column(name = "NAME")
-    private String username;
+    private String name;
 
     /**
      * password encrypted
@@ -47,7 +47,7 @@ public class User implements Serializable {
      * phone
      */
     @Column(name = "PHONE")
-    private String phoneNumber;
+    private String phone;
 
     /**
      * money
