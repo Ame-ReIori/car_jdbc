@@ -12,7 +12,6 @@ import com.yygq.demo.service.AssessorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.lang.module.Configuration;
 import java.util.List;
 
 /**

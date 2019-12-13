@@ -61,7 +61,7 @@
   	<div class="row div_function">
   		<div class="col-xs-4">
   			<div class="panel panel-default" id="pFunc1">
-  				<div class="panel-body">
+  				<div class="panel-body" style="cursor: pointer;">
   					<strong><p class='panel_p'>汽车店铺</p></strong>
   					<img class="iv_function" src="img/buycar.png">
   				</div>
@@ -69,7 +69,7 @@
   		</div>
   		<div class="col-xs-4">
   			<div class="panel panel-default"  id="pFunc2">
-  				<div class="panel-body">
+  				<div class="panel-body" style="cursor: pointer;">
   					<strong><p class='panel_p'>查看订单</p></strong>
   					<img class="iv_function" src="img/user_order.png">
   				</div>
@@ -77,7 +77,7 @@
   		</div>
   		<div class="col-xs-4">
   			<div class="panel panel-default"  id="pFunc3">
-  				<div class="panel-body">
+  				<div class="panel-body" style="cursor: pointer;">
   					<strong><p class='panel_p'>个人信息</p></strong>
   					<img class="iv_function" src="img/user_info.png">
   				</div>
@@ -103,7 +103,7 @@
   							<div class="div_center col-xs-9">
   								<div class="lpist-group-item-heading div_article_title">
   									<strong>
-  										<a href="#">{{car_model1}}</a>
+  										<a :href="'carinfo.html?car_id='+car_id1">{{car_model1}}</a>
   									</strong>
   								</div>
   								<p class="list-group-item-text div_article_content">
@@ -112,7 +112,7 @@
   							</div>
   							<!-- 右侧图片信息 -->
   							<div class="col-xs-3 div_right_info">
-  								<img class="iv_article img-rounded" src="img/car_demo.jpg">
+  								<img class="iv_article img-rounded" :src="car_img1">
   							</div>
   						</div>
 					</div>
@@ -122,7 +122,7 @@
 							<div class="div_center col-xs-9">
 								<div class="lpist-group-item-heading div_article_title">
 									<strong>
-										<a href="#">{{car_model2}}</a>
+										<a :href="'carinfo.html?car_id='+car_id2">{{car_model2}}</a>
 									</strong>
 								</div>
 								<p class="list-group-item-text div_article_content">
@@ -131,7 +131,7 @@
 							</div>
 							<!-- 右侧图片信息 -->
 							<div class="col-xs-3 div_right_info">
-								<img class="iv_article img-rounded" src="img/car_demo.jpg">
+								<img class="iv_article img-rounded" :src="car_img2">
 							</div>
 						</div>
 				   </div>
@@ -141,7 +141,7 @@
 							<div class="div_center col-xs-9">
 								<div class="lpist-group-item-heading div_article_title">
 									<strong>
-										<a href="#">{{car_model3}}</a>
+										<a :href="'carinfo.html?car_id='+car_id3">{{car_model3}}</a>
 									</strong>
 								</div>
 								<p class="list-group-item-text div_article_content">
@@ -150,7 +150,7 @@
 							</div>
 							<!-- 右侧图片信息 -->
 							<div class="col-xs-3 div_right_info">
-								<img class="iv_article img-rounded" src="img/car_demo.jpg">
+								<img class="iv_article img-rounded" :src="car_img3">
 							</div>
 						</div>
 					   </div>
@@ -161,7 +161,7 @@
 								<div class="div_center col-xs-9">
 									<div class="lpist-group-item-heading div_article_title">
 										<strong>
-											<a href="#">{{car_model4}}</a>
+											<a :href="'carinfo.html?car_id='+car_id4">{{car_model4}}</a>
 										</strong>
 									</div>
 									<p class="list-group-item-text div_article_content">
@@ -170,9 +170,15 @@
 								</div>
 								<!-- 右侧图片信息 -->
 								<div class="col-xs-3 div_right_info">
-									<img class="iv_article img-rounded" src="img/car_demo.jpg">
+									<img class="iv_article img-rounded" :src="car_img4">
 								</div>
 							</div>
+					   </div>
+
+					   <div style="margin-top: 20px;margin-left: 300px;">
+							<button class="btn btn-success btn-sm" v-on:click="firstpage">首页</button>
+							<button class="btn btn-info btn-sm" v-on:click="lastpage">上一页</button>
+							<button class="btn btn-info btn-sm" v-on:click="nextpage">下一页</button>
 					   </div>
   				</div>
 			</div>
@@ -231,6 +237,12 @@
 								<input type="password" class="form-control" autocomplete="new-password" v-model="register_vinput_pwd" placeholder="确认密码">
 							</div>
 							<div class="form-group">
+								<input type="text" class="form-control" autocomplete="new-password" v-model="register_identity_num" placeholder="身份证号">
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" autocomplete="new-password" v-model="register_real_name" placeholder="真实姓名">
+							</div>
+							<div class="form-group">
 								<input type="text" class="form-control" autocomplete="new-password" v-model="register_mail" placeholder="邮箱">
 							</div>
 							<div class="form-group">
@@ -272,46 +284,136 @@
   		
   	</div>
 </body>
-<!--<script src="js/util.js"></script>-->
+<script src="js/util.js"></script>
 <script>
+	//最上面那三个大按钮的页面跳转
+	$('#pFunc1').on('click', function(){
+		//这个地址后端要改的
+		window.location.href = 'http://localhost:8080/index';
+	});
+	$('#pFunc2').on('click', function(){
+		//这个地址后端要改的
+		window.location.href = "index.html";
+	});
+	$('#pFunc3').on('click', function(){
+		//这个地址后端要改的
+		window.location.href = "index.html";
+	});
+
+
 	/*下面这个实例是页面左边的车辆信息的实例，*/
+	/*
+		注意这里有个新的改动！！！
+		传车辆信息时候需要传car_id，因为我才意识到一点就是你点击链接的话，后端必须要知道你点击的是哪个
+		车辆的信息，所以需要传输一个car_id过去。
+	*/
 	var vm_carinfo = new Vue({
 		el: '#CarInfo',
 		/*一共有4组数据，每组的数据包括car_model,car_intro,car_img
-		其中car_img我还没想好怎么处理，所以暂时先传前面两个文字信息*/
+		其中car_img可以正常传输了，但是刚开始你看到的都是不显示url的，这是正常的，需要你后端传img的url*/
 		data:{
 			car_model1:'车型1',
 			car_intro1:'车辆信息介绍1',
+			car_id1: 000,
+			car_img1: '',
 			car_model2:'车型2',
 			car_intro2:'车辆信息介绍2',
+			car_id2: 000,
+			car_img2: '',
 			car_model3:'车型3',
 			car_intro3:'车辆信息介绍3',
+			car_id3: 000,
+			car_img3: '',
 			car_model4:'车型4',
 			car_intro4:'车辆信息介绍4',
+			car_id4: 000,
+			car_img4: '',
+			//这个是页码，默认的页码是1,一页是4个车辆的信息，页码是n的话就给前端返回4n-4:4n的车辆数据就好
+			page_num: 1
 		},
+
+		methods: {
+			//定义一个函数，负责在翻页时候修改界面信息
+			page_change: function(page_num){
+				//这里的地址需要你改嗷
+				axios.post('http://localhost:8080/carInfo_onPage',{
+					//发过去page_num,然后根据不同的pagenum来返回信息
+					page_num: page_num
+				})
+				.then(response =>{
+					var datajson = response.data;
+					//console.log(datajson);
+					//可以用console.log打印一下数据看是否正确
+					//下面进行赋值，注意datajson后面跟着的是键名，这个需要你自己改
+					//注意改datajson的键名！！！！！！！！例如car_model3
+					vm_carinfo.car_model1 = datajson.car_model1;
+					vm_carinfo.car_model2 = datajson.car_model2;
+					vm_carinfo.car_model3 = datajson.car_model3;
+					vm_carinfo.car_model4 = datajson.car_model4;
+					vm_carinfo.car_intro1 = datajson.car_intro1;
+					vm_carinfo.car_intro2 = datajson.car_intro2;
+					vm_carinfo.car_intro3 = datajson.car_intro3;
+					vm_carinfo.car_intro4 = datajson.car_intro4;
+					vm_carinfo.car_id1 = datajson.car_id1;
+					vm_carinfo.car_id2 = datajson.car_id2;
+					vm_carinfo.car_id3 = datajson.car_id3;
+					vm_carinfo.car_id4 = datajson.car_id4;
+					vm_carinfo.car_img1 = datajson.car_img11;
+					vm_carinfo.car_img2 = datajson.car_img22;
+					vm_carinfo.car_img3 = datajson.car_img33;
+					vm_carinfo.car_img4 = datajson.car_img44;
+				})
+			},
+			firstpage: function(){
+				this.page_num = 1;
+				this.$options.methods.page_change(this.page_num);
+			},
+			nextpage: function(){
+				this.page_num += 1
+				this.$options.methods.page_change(this.page_num)
+			},
+			lastpage: function(){
+				if(this.page_num == 1){
+					alert("已经是第一页了！");
+				}else{
+					this.page_num -= 1
+					this.$options.methods.page_change(this.page_num)
+				}
+			}
+		},
+
 		/*传数据时候在下面这个created函数的axios里面就可以了，
 		这里接收后端传过来的车辆信息数据，数据是json格式的，
 		注意你需要改的是axios的地址和json包的参数，这里的地址是我测试时候的地址*/
 		created: function(){
-			axios.post('test2.php',{
-				//后端收到post_code=10表示要向index界面传输车辆信息的数据，如果没有必要可以删掉
-				post_code : 10
+			axios.post('http://localhost:8080/carInfo_onPage',{
+				//这里修改一下，我传递给你的是页码
+				page_num: this.page_num
 			})
 			//下面这个箭头一定不能删掉，不然this的指向将不会是vue的实例
 			.then(response => {
 				var datajson = response.data;
 				//可以用console.log打印一下数据看是否正确
-				// console.log(datajson.car_intro);
-				// console.log(datajson.car_model);
+
 				//下面进行赋值，注意datajson后面跟着的是键名，这个需要你自己改
-				this.car_model1 = datajson.car_model;
-				this.car_model2 = datajson.car_model;
-				this.car_model3 = datajson.car_model;
-				this.car_model4 = datajson.car_model;
-				this.car_intro1 = datajson.car_intro;
-				this.car_intro2 = datajson.car_intro;
-				this.car_intro3 = datajson.car_intro;
-				this.car_intro4 = datajson.car_intro;
+				//注意改datajson的键名！！！！！！！！例如car_model3
+				//你看到图片失效的情况是正常的，因为你没有返回图片的url，在后端改一改就好了
+				this.car_model1 = datajson.car_model1;
+				this.car_model2 = datajson.car_model2;
+				this.car_model3 = datajson.car_model3;
+				this.car_model4 = datajson.car_model4;
+				this.car_intro1 = datajson.car_intro1;
+				this.car_intro2 = datajson.car_intro2;
+				this.car_intro3 = datajson.car_intro3;
+				this.car_intro4 = datajson.car_intro4;
+				this.car_id1 = datajson.car_id1;
+				this.car_id2 = datajson.car_id2;
+				this.car_id3 = datajson.car_id3;
+				this.car_id4 = datajson.car_id4;
+				this.car_img1 = datajson.car_img1;
+				this.car_img2 = datajson.car_img2;
+				this.car_img3 = datajson.car_img3;
+				this.car_img4 = datajson.car_img4;
 			})
 		}
 	})
@@ -324,30 +426,32 @@
 			register_input_usr : "",
 			register_input_pwd : "",
 			register_vinput_pwd : "",
+			register_identity_num : "",
+			register_real_name : "",
 			register_mail : "",
 			register_phone : "",
 		},
 		methods:{
 			register: function(){
-				if(this.register_input_usr=="" || this.register_input_pwd=="" || this.register_mail=="" || this.register_phone==""){
+				if(this.register_input_usr=="" || this.register_input_pwd=="" || this.register_mail=="" || this.register_phone=="" || this.register_identity_num=="" || this.register_real_name==""){
 					alert('输入不能为空！')
 				}else if(this.register_input_pwd != this.register_vinput_pwd){
 					alert('两次密码输入不一致！')
 				}else{
+					//用户状态，注册时直接置为1
+					var user_status = 1;
 					//这里的axios的post的地址需要你来改一下，注意注意！
-					alert(this.register_input_usr)
-					alert(this.register_input_pwd)
-					alert(this.register_mail)
-					alert(this.register_phone)
-					axios.post('test.php',{
-						username: this.register_input_usr,
+					axios.post('http://localhost:8080/logon',{
+						name: this.register_input_usr,
 						password: this.register_input_pwd,
-						mail: this.register_mail,
-						phone: this.register_phone
+						identityNumber: this.register_identity_num,
+						realName: this.register_real_name,
+						email: this.register_mail,
+						phone: this.register_phone,
+						//user_status : user_status
 					})
 					.then(function (response) {
-						alert(response.data)
-						//我偏就不要在这里设置sessionstorage
+						//我偏就不要在这里设置cookie
 						var response_num = response.data
 						//后端返回1表示用户名已经存在，如果返回0就表示注册成功
 						if(response_num == 1){
@@ -355,7 +459,7 @@
 						}else if(response_num == 0){
 							alert('注册成功！');
 							//下面跳转的网址你改一下，就改成主页就可以啦
-							window.location.href = 'index.html';
+							window.location.href = 'http://localhost:8080/index';
 						}else{
 							alert('服务器错误！');
 						}
@@ -378,12 +482,18 @@
 		},
 		methods:{
 			login: function(){
+				//用户登录的时间
+				var d = new Date();
+				var login_date = d.toUTCString();
+
 				//和上面一样，这里后端需要改一下这个axios的地址
 				axios.post('http://localhost:8080/login',{
-					username: this.login_input_usr,
+					name: this.login_input_usr,
 					password: this.login_input_pwd,
+					//login_date: login_date
 				})
 				.then(response => {
+					//新的改变，注意下这里返回时候需要加上userid！！
 					/*注意一下这里登录后，如果登录不成功，返回json{code:'1'}即可，
 					  但是如果登录成功的话，返回的东西应该是
 					  json{code:'0', user_balance:'xx', user_mail:'xx'...}等等这些用户的所有信息，因为cookie是页面共享的
@@ -393,12 +503,14 @@
 						alert('用户名或密码错误！');
 					}else if(response_code == '0'){
 						//后端返回0，表示登录成功，成功之后就需要设置cookie,这里表示cookie设置7天，生效目录是服务器根目录
+						//这里cookie增加了userid
+						this.$cookies.set('userid', response.data.userid, '7d','/');
 						this.$cookies.set('username', this.login_input_usr, '7d','/');
 						this.$cookies.set('user_balance', response.data.user_balance, '7d','/');
 						this.$cookies.set('user_mail', response.data.user_mail, '7d','/');
-						this.$cookies.set('user_phone', response.data.user_phone, '7d','/');					
+						this.$cookies.set('user_phone', response.data.user_phone, '7d','/');			
 						//同样的，这个跳转地址也需要你改一下
-						window.location.href = 'index.html';
+						window.location.href = 'http://localhost:8080/index';
 					}else{
 						alert('服务器错误！');
 					}
@@ -423,19 +535,20 @@
 		methods:{
 			//登出
 			logout: function(){
+				this.$cookies.remove('userid');
 				this.$cookies.remove('username');
 				this.$cookies.remove('user_balance');
 				this.$cookies.remove('user_mail');
 				this.$cookies.remove('user_phone');
 				//跳转到主页，这个后端也需要改路径
-				window.location.href = 'index.html';
+				window.location.href ='http://localhost:8080/index';
 			}	
 		},
 
 		//实例创建之前的方法
 		created:function(){
 			//检查cookie是否存在
-			if(this.$cookies.isKey('username')){
+			if(this.$cookies.isKey('userid')){
 				this.username = this.$cookies.get('username');
 				this.user_balance = this.$cookies.get('user_balance');
 				this.user_mail = this.$cookies.get('user_mail');
@@ -443,7 +556,5 @@
 			}
 		}
 	})
-
-
 </script>
 </html>

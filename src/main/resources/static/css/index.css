@@ -1,11 +1,11 @@
 
 .carousel {
-	height: 440px;
+	height: 540px;
 	background-color: #000;
 }
 .carousel .item {
 	background-color: #000;
-	height: 440px;
+	height: 540px;
 }
 .carousel img{
 	margin: auto;
@@ -82,7 +82,7 @@
 
 .div_center {
     height: auto;
-    max-height: 140px;  
+    max-height: 300px;
     overflow: hidden; 
 }
 

@@ -48,7 +48,7 @@ public class Assessor {
      * level
      */
     @Column(name = "LEVEL")
-    private String level;
+    private Long level;
 
     /**
      * identity number

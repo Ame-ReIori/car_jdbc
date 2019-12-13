@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>卖二手车辣</title>
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="https://unpkg.com/vue-cookies@1.5.12/vue-cookies.js"></script>
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+            </ol>
+  
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox" id='detail_imgs'>
+                <div class="item active">
+                    <img :src="img1">
+                </div>
+                <div class="item">
+                    <img :src="img2">
+                </div>
+                <div class="item">
+                    <img :src="img3">
+                </div>
+                <div class="item">
+                    <img :src="img4">
+                </div>
+            </div>
+  
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        
+        <!-- 功能模块 -->
+        <div class="row div_function">
+            <div class="col-xs-4">
+                <div class="panel panel-default" id="pFunc1">
+                    <div class="panel-body" style="cursor: pointer;">
+                        <strong><p class='panel_p'>汽车店铺</p></strong>
+                        <img class="iv_function" src="img/buycar.png">
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="panel panel-default"  id="pFunc2">
+                    <div class="panel-body" style="cursor: pointer;">
+                        <strong><p class='panel_p'>查看订单</p></strong>
+                        <img class="iv_function" src="img/user_order.png">
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="panel panel-default"  id="pFunc3">
+                    <div class="panel-body" style="cursor: pointer;">
+                        <strong><p class='panel_p'>个人信息</p></strong>
+                        <img class="iv_function" src="img/user_info.png">
+                    </div>
+                </div>
+            </div>
+      </div>
+        
+  
+        <div class="container div_divider">
+            <div class="row">
+                <div class="col-xs-9">
+
+                    <div id="all_car_info">
+                            <div class="list-group div_article">
+                                    <div class="list-group-item active item_article_first">
+                                        <h3 class="list-group-item-heading" style="margin-top: 5px;">
+                                            基本信息
+                                        </h3>
+                                    </div>
+                                </div>
+            
+                                <div class="list-group-item item_article">
+                                    <div class="row">
+                                        <div class="div_center col-xs-9">
+                                            <div id="car_base_info">
+                                                <p>
+                                                    <span style="font-size: 18px; font-weight: 800; letter-spacing: 5px; padding-left: 100px; color: darkgrey;">车辆型号：</span>
+                                                    <span style="font-size: 20px; font-weight: 500; letter-spacing: 5px;">{{car_type}}</span>
+                                                </p>
+                                                <p>
+                                                    <span style="font-size: 18px; font-weight: 800; letter-spacing: 5px; padding-left: 100px; color: darkgrey;">车主昵称：</span>
+                                                    <span style="font-size: 20px; font-weight: 500; letter-spacing: 5px;">{{owner_usr}}</span>
+                                                </p>
+                                                <p>
+                                                    <span style="font-size: 18px; font-weight: 800; letter-spacing: 5px; padding-left: 100px; color: darkgrey;">车主电话：</span>
+                                                    <span style="font-size: 20px; font-weight: 500; letter-spacing: 5px;">{{owner_tel}}</span>
+                                                </p>
+                                                <p>
+                                                    <span style="font-size: 18px; font-weight: 800; letter-spacing: 5px; padding-left: 100px; color: darkgrey;">过户次数：</span>
+                                                    <span style="font-size: 20px; font-weight: 500; letter-spacing: 5px;">{{transfer_time}}</span>
+                                                </p>
+                                                <p>
+                                                    <span style="font-size: 18px; font-weight: 800; letter-spacing: 5px; padding-left: 100px; color: darkgrey;">车辆报价：</span>
+                                                    <span style="font-size: 20px; font-weight: 800; letter-spacing: 5px; color: red">{{car_price}}</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="list-group div_article">
+                                        <div class="list-group-item active item_article_first">
+                                            <h3 class="list-group-item-heading" style="margin-top: 5px;">
+                                                检测信息
+                                            </h3>
+                                        </div>
+                                </div>
+                                <div class="list-group-item item_article">
+                                    <div class="row">
+                                        <div class="div_center col-xs-9" style="max-height: 600px;">
+                                            <div id="car_base_info">
+                                                <p>
+                                                    <span style="font-size: 18px; font-weight: 800; letter-spacing: 5px; padding-left: 100px; color: darkgrey;">车辆评估师职称：</span>
+                                                    <span style="font-size: 18px; font-weight: 500;">{{assessor_level}}</span>
+                                                </p>
+                                                <p>
+                                                    <span style="font-size: 18px; font-weight: 800; letter-spacing: 5px; padding-left: 100px; color: darkgrey;">车辆评估师电话：</span>
+                                                    <span style="font-size: 18px; font-weight: 500;">{{assessor_tel}}</span>
+                                                </p>
+                                                <p>
+                                                    <span style="font-size: 18px; font-weight: 800; letter-spacing: 5px; padding-left: 100px; color: darkgrey;">发动机情况：</span>
+                                                    <span style="font-size: 18px; font-weight: 500;">{{engine}}</span>
+                                                </p>
+                                                <p>
+                                                    <span style="font-size: 18px; font-weight: 800; letter-spacing: 5px; padding-left: 100px; color: darkgrey;">车窗情况：</span>
+                                                    <span style="font-size: 18px; font-weight: 500;">{{windows}}</span>
+                                                </p>
+                                                <p>
+                                                    <span style="font-size: 18px; font-weight: 800; letter-spacing: 5px; padding-left: 100px; color: darkgrey;">轮胎情况：</span>
+                                                    <span style="font-size: 18px; font-weight: 500;">{{wheels}}</span>
+                                                </p>
+                                                <p>
+                                                    <span style="font-size: 18px; font-weight: 800; letter-spacing: 5px; padding-left: 100px; color: darkgrey;">碰撞情况：</span>
+                                                    <span style="font-size: 18px; font-weight: 500;">{{collision}}</span>
+                                                </p>
+                                                <p>
+                                                    <span style="font-size: 18px; font-weight: 800; letter-spacing: 5px; padding-left: 100px; color: darkgrey;">车灯情况：</span>
+                                                    <span style="font-size: 18px; font-weight: 500;">{{lights}}</span>
+                                                </p>
+                                                <p>
+                                                    <span style="font-size: 18px; font-weight: 800; letter-spacing: 5px; padding-left: 100px; color: darkgrey;">外观情况：</span>
+                                                    <span style="font-size: 18px; font-weight: 500;">{{appearance}}</span>
+                                                </p>
+                                                <p>
+                                                    <span style="font-size: 18px; font-weight: 800; letter-spacing: 5px; padding-left: 100px; color: darkgrey;">仪表盘情况：</span>
+                                                    <span style="font-size: 18px; font-weight: 500;">{{dashboard}}</span>
+                                                </p>
+                                                <p>
+                                                    <span style="font-size: 18px; font-weight: 800; letter-spacing: 5px; padding-left: 100px; color: darkgrey;">底盘情况：</span>
+                                                    <span style="font-size: 18px; font-weight: 500;">{{chassis}}</span>
+                                                </p> 
+                                                <p>
+                                                    <span style="font-size: 18px; font-weight: 800; letter-spacing: 5px; padding-left: 100px; color: darkgrey;">安全系统情况：</span>
+                                                    <span style="font-size: 18px; font-weight: 500;">{{security_system}}</span>
+                                                </p> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    </div>
+                    
+
+                    <div class="list-group div_article">
+                        <div class="list-group-item active item_article_first" style="display: flex; flex-direction: row; align-items: center; justify-content: center;">
+                            <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; width: 50%;">
+                                <button class="btn btn-success btn-lg" style="width: 150px;" data-toggle="modal" data-target="#buyModal">购买</button>
+                            </div>                   
+                            <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; width: 50%">
+                                <button class="btn btn-primary btn-lg" style="width: 150px;" data-toggle="modal">再看看</button>
+                            </div> 
+                        </div>
+                    </div>
+
+              </div>
+                
+                <!-- 右侧 -->
+                <div class="col-xs-3 div_record" id="userInfoBlock">
+                    <!-- 用户信息 -->
+                    <div class="jumbotron div_userinfo">
+                        <img class="iv_user_head img-circle" src="img/user_img.png">
+                        <template><div style="display: inline-block; margin-left: 12px;font-size: 18px;">{{username}}</div></template>
+                    </div>
+                    
+                    <div style="display: flex;">
+                        <div style="flex: 1"><hr></div>
+                        <div style="text-align: center;line-height: 48px;color: #34374C; font-size:20px;">用户信息</div>
+                        <div style="flex: 1"><hr></div>
+                    </div>
+                    <div class='current_info'>
+                      <template><p>账户余额：{{user_balance}}</p></template>
+                      <template><p>邮箱：{{user_mail}}</p></template>
+                      <template><p>手机号：{{user_phone}}</p></template>
+                  </div>
+                </div>
+            </div>
+        
+            <!-- 购买模态框 -->
+            <div class="modal fade bs-example-modal-sm" id="buyModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+                <div class="modal-dialog modal-sm" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="modal-title" id="myModalLabel" style="text-align: center;">购买</div>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form-horizontal" style="padding: 12px;">
+                                <div class="form-group">
+                                    <input type="password" class="form-control" autocomplete="new-password" v-model="buy_password" placeholder="密码">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" autocomplete="new-password" v-model="buy_idnum" placeholder="身份证号">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" autocomplete="new-password" v-model="buy_usertel" placeholder="手机号">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer" style="text-align: center;">
+                            <button v-on:click="buy" type="button" class="btn btn-success" style="width: 100%" id="buybutton">BUY!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+  </body>
+  <script src="js/util.js"></script>
+  <script>
+        //最上面那三个大按钮的页面跳转
+        $('#pFunc1').on('click', function(){
+            //这个地址后端要改的
+            window.location.href = 'http://localhost:8080/index';
+        });
+        $('#pFunc2').on('click', function(){
+            //这个地址后端要改的
+            window.location.href = "../index.html";
+        });
+        $('#pFunc3').on('click', function(){
+            //这个地址后端要改的
+            window.location.href = "../index.html";
+        });
+  </script>
+  <script>
+    //解析URL参数的函数
+	function getUrlParams(name){
+    	return decodeURIComponent((new RegExp('[?|&]'+name+'='+'([^&;]+?)(&|#|;|$)').exec(location.href)||[,""])[1].replace(/\+/g,'%20'))||null;
+  	}
+
+
+    //页面最上面汽车照片滚轮条的实例
+    var vm_detail_imgs = new Vue({
+        el: '#detail_imgs',
+        data: {
+            img1: '',
+            img2: '',
+            img3: '',
+            img4: '',
+            car_id: 0
+        },
+        //实例创建之前根据car_id来查到对应的信息
+        created:function(){
+            this.car_id = getUrlParams('car_id');
+            //这个地址需要改，注意路径，这个是在html文件夹里面的！！
+            axios.post('http://localhost:8080/postImg',{
+                car_id: this.car_id
+            })
+            //返回的是4个图片的url，如果有需要需要改response.data这个json包的键，注意路径！！
+            .then(response => {
+                this.img1 = response.data.img;
+                this.img2 = response.data.img;
+                this.img3 = response.data.img;
+                this.img4 = response.data.img;
+            })
+        }
+    })
+    
+    //汽车信息的Vue实例
+    var vm_carinfo = new Vue({
+        el: "#all_car_info",
+        data: {
+            car_type: "",
+            owner_usr: "",
+            owner_tel: "",
+            transfer_time: "",
+            car_price: "",
+            assessor_level: "",
+            assessor_tel: "",
+            engine: "",
+            windows: "",
+            wheels: "",
+            collision: "",
+            lights: "",
+            appearance: "",
+            dashboard: "",
+            chassis: "",
+            security_system: "",
+            //下面这个是车辆id和车主id，网页上不显示
+            car_id: 0,
+            owner_id: 0,
+        },
+        created:function(){
+            //解析url中的参数，也就是车辆的id，针对这个车辆的id进行初始化
+            this.car_id = getUrlParams('car_id');
+            console.log(this.car_id);
+            //解析完car_id之后传给后端，进行查询，这里是需要你改的地方
+            axios.post('../test4.php',{
+                //给后端传过去car_id
+                car_id: this.car_id
+            }).then(response => {
+                /*注意一下这里就会传递回来车辆的所有信息，请逐条核查*/
+                var car_info = response.data;
+                this.car_type = car_info.car_type;
+                this.owner_usr = car_info.owner_usr;
+                this.owner_tel = car_info.owner_tel;
+                this.transfer_time = car_info.transfer_time;
+                this.car_price = car_info.car_price;
+                this.assessor_level = car_info.assessor_level;
+                this.assessor_tel = car_info.assessor_tel;
+                this.engine = car_info.engine;
+                this.windows = car_info.windows;
+                this.wheels = car_info.wheels;
+                this.collision = car_info.collision;
+                this.lights = car_info.lights;
+                this.appearance = car_info.appearance;
+                this.dashboard = car_info.dashboard;
+                this.chassis = car_info.chassis;
+                this.security_system = car_info.security_system;
+                this.owner_id = car_info.owner_id;
+            })
+            .catch(function (error) {
+                console.log(error)
+            })
+        }
+    })
+
+    //购买产品的Vue实例，这个实例绑定到购买模态框
+    var vm_buy = new Vue({
+        el: '#buyModal',
+        data:{
+            buy_password : "",
+            buy_idnum : "",
+            buy_usertel : "",
+        },
+        methods:{
+            //在模态框点击“buy”按钮之后的事件
+            buy:function(){
+                //如果cookie存在，说明用户已经登录，可以进行购买
+                if(this.$cookies.isKey('username')){
+                    if(this.buy_password==""&&this.buy_idnum==""&&this.buy_usertel==""){
+                        alert('输入不能为空');
+                    }else if(parseInt(this.$cookies.get('user_balance')) < parseInt(vm_carinfo.car_price)){
+                        alert('余额不足');
+                    }else{
+                        //用户输入密码、身份证、手机号验证信息，通过验证才可以买嗷,这个地址同样需要改！
+                        axios.post('../test.php',{
+                            password: this.buy_password,
+                            identity_num: this.buy_idnum,
+                            user_tel: this.user_tel
+                        }).then(response => {
+                            //收到信息之后就去查询，如果信息验证正确就返回0，然后进行后续的操作
+                            if(response.data == 0){
+                                //信息校验成功之后，我会把信息发给后端，然后你根据excel插入用户订单表
+                                //用户的余额需要更新！！
+                                this.$cookies.set('user_balance',parseInt(this.$cookies.get('user_balance'))-parseInt(vm_carinfo.car_price));
+                                //现在把这些相关的信息用ajax发给后端，然后你就把这些信息插入后端,这个地址需要你改一改
+                                //订单创建的时间
+                                var d = new Date();
+                                var order_date = d.toUTCString();
+                                //使用ajax发送给后端
+                                axios.post('../test.php',{
+                                    created_time: order_date,
+                                    car_id: vm_carinfo.car_id,
+                                    customer_id: this.$cookies.get('userid'),
+                                    owner_id: vm_carinfo.owner_id,
+                                    deal_price: vm_carinfo.car_price,
+                                    //订单状态是0，表示未审核
+                                    order_state: 0
+                                }).then(response => {
+                                    //成功之后就给前端传回来一个0，否则传回来一个1
+                                    if(response.data == 0){
+                                        alert('购买成功！');
+                                    }else{
+                                        alert('购买失败！');
+                                    }
+                                })
+                                .catch(function (error) {
+                                    console.log(error)
+                                })
+                                //最后购买成功后需要跳转的页面，这个需要你改
+                                window.location.href = "../index.html";
+                            }else{
+                                alert('信息校验失败！');
+                            }
+                        })
+                        .catch(function (error) {
+                            console.log(error)
+                        })
+                    }
+                }else{
+                    alert('请先登录！');
+                }
+            }
+        }
+    })
+  </script>
+  
+  <script>
+	/*下面这个是右边个人信息展示界面的实例*/
+	var vm_userinfo = new Vue({
+		el: '#userInfoBlock',
+		data:{
+			username : '未登录',
+			user_balance : '未登录',
+			user_mail : '未登录',
+			user_phone : '未登录',
+		},
+		//实例创建之前的方法
+		created:function(){
+			//检查cookie是否存在
+			if(this.$cookies.isKey('userid')){
+				this.username = this.$cookies.get('username');
+				this.user_balance = this.$cookies.get('user_balance');
+				this.user_mail = this.$cookies.get('user_mail');
+				this.user_phone = this.$cookies.get('user_phone');
+			}
+		}
+	})
+  </script>
+</html>

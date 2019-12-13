@@ -20,4 +20,5 @@ public class CarAssessmentController {
     public CarAssessmentController(CarAssessmentService carAssessmentService){
         this.carAssessmentService = carAssessmentService;
     }
+
 }
