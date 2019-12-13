@@ -7,6 +7,7 @@ import cn.hutool.core.util.ArrayUtil;
 import cn.hutool.core.util.ObjectUtil;
 import cn.hutool.core.util.ReflectUtil;
 import cn.hutool.core.util.StrUtil;
+import cn.hutool.json.JSONUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -65,7 +66,7 @@ public class BaseDao<T, P> {
 
         String sql = StrUtil.format("INSERT INTO {table} ({columns}) VALUES ({params})", Dict.create().set("table", table).set("columns", columns).set("params", params));
         log.debug("[execute sql] sql: {}", sql);
-        log.debug("[execute sql] params: {}", params);
+        log.debug("[execute sql] params: {}", JSONUtil.toJsonStr(values));
         return jdbcTemplate.update(sql, values);
     }
 
@@ -77,9 +78,12 @@ public class BaseDao<T, P> {
      */
     protected Integer deleteById(P pk){
         String table = getTableName();
-        String sql = StrUtil.format("DELETE FROM {table} WHERE id = ?", Dict.create().set("table", table));
+
+        String primaryKey = getPkName();
+
+        String sql = StrUtil.format("DELETE FROM {table} WHERE {primaryKey} = ?", Dict.create().set("table", table).set("primaryKey", primaryKey));
         log.debug("[execute sql] sql: {}", sql);
-        log.debug("[execute sql] params: {}", pk);
+        log.debug("[execute sql] params: {}", JSONUtil.toJsonStr(pk));
         return jdbcTemplate.update(sql, pk);
     }
 
@@ -93,6 +97,7 @@ public class BaseDao<T, P> {
      */
     protected Integer updateById(T t, P pk, Boolean ignoreNull){
         String table = getTableName(t);
+        String primaryKey = getPkName();
 
         List<Field> filterField = getField(t, ignoreNull);
 
@@ -106,9 +111,9 @@ public class BaseDao<T, P> {
 
         Object[] values = ArrayUtil.toArray(valueList, Object.class);
 
-        String sql = StrUtil.format("UPDATE {table} SET {params} WHERE id = ?", Dict.create().set("table", table).set("params", params));
+        String sql = StrUtil.format("UPDATE {table} SET {params} WHERE {primaryKey} = ?", Dict.create().set("table", table).set("params", params).set("primaryKey", primaryKey));
         log.debug("[execute sql] sql: {}", sql);
-        log.debug("[execute sql] params: {}", params);
+        log.debug("[execute sql] params: {}", JSONUtil.toJsonStr(values));
         return jdbcTemplate.update(sql, values);
     }
 
@@ -119,11 +124,13 @@ public class BaseDao<T, P> {
      * @return one record
      */
     protected T queryOneById(P pk){
+        System.out.println("pk = " + pk);
         String table = getTableName();
-        String sql = StrUtil.format("SELECT * FROM {table} WHERE id = ?", Dict.create().set("table", table));
+        String primaryKey = getPkName();
+        String sql = StrUtil.format("SELECT * FROM {table} WHERE {primaryKey} = ?", Dict.create().set("table", table).set("primaryKey", primaryKey));
         RowMapper<T> rowMapper = new BeanPropertyRowMapper<>(clazz);
         log.debug("[execute sql] sql: {}", sql);
-        log.debug("[execute sql] params: {}", pk);
+        log.debug("[execute sql] params: {}", JSONUtil.toJsonStr(new Object[]{pk}));
         return jdbcTemplate.queryForObject(sql, new Object[]{pk}, rowMapper);
     }
 
@@ -136,6 +143,7 @@ public class BaseDao<T, P> {
     protected List<T> queryByExample(T t){
         String table = getTableName(t);
         List<Field> filterField = getField(t, true);
+
         List<String> columnList = getColumns(filterField);
 
         List<String> columns = columnList.stream().map(s -> " and " + s + " = ? ").collect(Collectors.toList());
@@ -146,9 +154,10 @@ public class BaseDao<T, P> {
 
         String sql = StrUtil.format("SELECT * FROM {table} WHERE 1 = 1 {where}", Dict.create().set("table", table).set("where", StrUtil.isBlank(where) ? "" : where));
         log.debug("[execute sql] sql: {}", sql);
+        log.debug("[execute sql] params: {}", JSONUtil.toJsonStr(values));
         List<Map<String, Object>> maps = jdbcTemplate.queryForList(sql, values);
         List<T> ret = CollUtil.newArrayList();
-        maps.forEach(map -> ret.add(BeanUtil.fillBeanWithMap(map, ReflectUtil.newInstance(clazz), true, false)));
+        maps.forEach(map -> ret.add(BeanUtil.fillBeanWithMap(map, ReflectUtil.newInstance(clazz), false, false)));
         return ret;
     }
 
@@ -159,7 +168,6 @@ public class BaseDao<T, P> {
      */
     protected List<T> queryAll(){
         String table = getTableName();
-        System.out.println(table);
 
         String sql = StrUtil.format("SELECT * FROM {table} WHERE 1 = 1", Dict.create().set("table", table));
 
@@ -249,5 +257,9 @@ public class BaseDao<T, P> {
             filterField = fieldStream.collect(Collectors.toList());
         }
         return filterField;
+    }
+
+    private String getPkName(){
+        return ReflectUtil.getFields(clazz)[0].getAnnotation(Column.class).name();
     }
 }
