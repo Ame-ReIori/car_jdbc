@@ -17,4 +17,5 @@ public @interface Pk {
      * @return auto increase pk
      */
     boolean auto() default true;
+    String name();
 }
