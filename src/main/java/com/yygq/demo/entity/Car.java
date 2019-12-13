@@ -68,7 +68,7 @@ public class Car {
      * transfer times
      */
     @Column(name = "TRANSFER_TIME")
-    private int transferTime;
+    private Integer transferTime;
 
     /**
      * is sold?
