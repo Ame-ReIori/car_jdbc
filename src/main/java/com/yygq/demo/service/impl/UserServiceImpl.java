@@ -85,6 +85,7 @@ public class UserServiceImpl implements UserService {
         String salt = exist.getSalt();
         String pass = exist.getPassword();
         String identityNumberDigest = exist.getIdentityNumber();
+        String realName = exist.getRealName();
         String mac = null;
 
         if(StrUtil.isNotBlank(user.getPassword())){
@@ -95,12 +96,14 @@ public class UserServiceImpl implements UserService {
             user.setSalt(salt);
         }
 
-        if(StrUtil.isNotBlank(user.getIdentityNumber())){
+        if(StrUtil.isNotBlank(user.getIdentityNumber()) || StrUtil.isNotBlank(user.getRealName())){
+            realName = user.getRealName();
             identityNumberDigest = SecureUtil.sha256(user.getIdentityNumber());
             user.setIdentityNumber(identityNumberDigest);
+            user.setRealName(realName);
         }
 
-        mac = SecureUtil.sha256(exist.getName() + pass + salt + exist.getPhone() + exist.getMoney() + identityNumberDigest + exist.getStatus());
+        mac = SecureUtil.sha256(exist.getName() + pass + salt + exist.getPhone() + exist.getMoney() + realName + identityNumberDigest + exist.getStatus());
         user.setMac(mac);
 
         BeanUtil.copyProperties(user, exist, CopyOptions.create().setIgnoreNullValue(true));
