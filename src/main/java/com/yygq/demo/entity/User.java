@@ -4,10 +4,6 @@ import com.yygq.demo.annotation.Column;
 import com.yygq.demo.annotation.Pk;
 import com.yygq.demo.annotation.Table;
 import lombok.Data;
-import com.alibaba.fastjson.annotation.JSONField;
-import lombok.Getter;
-import lombok.Setter;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.Serializable;
 import java.util.Date;
