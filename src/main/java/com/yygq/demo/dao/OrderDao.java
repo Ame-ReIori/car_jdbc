@@ -20,26 +20,56 @@ public class OrderDao extends BaseDao<Order, String> {
         super(jdbcTemplate);
     }
 
+    /**
+     * insert
+     * @param order
+     * @return success number
+     */
     public Integer insert(Order order){
         return super.insert(order, true);
     }
 
+    /**
+     * delete
+     * @param id
+     * @return success number
+     */
     public Integer delete(String id){
         return super.deleteById(id);
     }
 
+    /**
+     * update
+     * @param order
+     * @param id
+     * @return success number
+     */
     public Integer update(Order order, String id){
         return super.updateById(order, id, true);
     }
 
+    /**
+     * select one
+     * @param id
+     * @return one order
+     */
     public Order selectById(String id){
         return super.queryOneById(id);
     }
 
+    /**
+     * select like order
+     * @param order
+     * @return list of orders
+     */
     public List<Order> selectOrderList(Order order){
         return super.queryByExample(order);
     }
 
+    /**
+     * select all
+     * @return list of orders
+     */
     public List<Order> selectAllOrder(){
         return super.queryAll();
     }
