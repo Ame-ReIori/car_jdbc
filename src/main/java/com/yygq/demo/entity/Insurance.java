@@ -18,7 +18,7 @@ public class Insurance {
     /**
      * id
      */
-    @Pk
+    @Pk(name = "INSURE_ID")
     @Column(name = "INSURE_ID")
     private String insureId;
 

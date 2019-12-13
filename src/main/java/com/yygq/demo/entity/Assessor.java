@@ -16,7 +16,7 @@ public class Assessor {
     /**
      * id
      */
-    @Pk
+    @Pk(name = "ASSESS_ID")
     @Column(name = "ASSESS_ID")
     private Long assessId;
 

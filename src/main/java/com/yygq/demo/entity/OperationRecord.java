@@ -16,7 +16,7 @@ public class OperationRecord {
     /**
      * record id
      */
-    @Pk
+    @Pk(name = "RECORD_ID")
     @Column(name = "RECORD_ID")
     private Long recordId;
 

@@ -16,7 +16,7 @@ public class CarAssessment {
     /**
      * id
      */
-    @Pk
+    @Pk(name = "CAR_ID")
     @Column(name = "CAR_ID")
     private Long carId;
 

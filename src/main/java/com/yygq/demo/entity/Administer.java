@@ -18,7 +18,7 @@ public class Administer {
     /**
      * id
      */
-    @Pk
+    @Pk(name = "ADMIN_ID")
     @Column(name = "ADMIN_ID")
     private Long adminId;
 

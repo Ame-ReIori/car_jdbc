@@ -18,7 +18,7 @@ public class Order {
     /**
      * id
      */
-    @Pk
+    @Pk(name = "ORDER_ID")
     @Column(name = "ORDER_ID")
     private String orderId;
 

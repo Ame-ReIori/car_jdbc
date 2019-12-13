@@ -21,7 +21,7 @@ public class User implements Serializable {
      * primary key
      * auto-increase
      */
-    @Pk
+    @Pk(name = "USER_ID")
     @Column(name = "USER_ID")
     private Long userId;
 
