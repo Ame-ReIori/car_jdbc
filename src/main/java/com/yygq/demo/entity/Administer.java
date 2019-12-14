@@ -26,7 +26,7 @@ public class Administer {
      * admin's name
      */
     @Column(name = "NAME")
-    private String username;
+    private String name;
 
     /**
      * admin's pw

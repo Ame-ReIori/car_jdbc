@@ -26,13 +26,13 @@ public class Insurance {
      * company
      */
     @Column(name = "G_COMPANY")
-    private String company;
+    private String gCompany;
 
     /**
      * the type of insurance
      */
     @Column(name = "INSURE_TYPECODE")
-    private String insureType;
+    private String insureTypecode;
 
     /**
      * the id of car

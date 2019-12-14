@@ -35,7 +35,7 @@ public class AdministerServiceImpl {
         String identityNumberDigest = SecureUtil.sha256(administer.getIdentityNumber());
         administer.setIdentityNumber(identityNumberDigest);
 
-        String adminName = administer.getUsername();
+        String adminName = administer.getName();
         String phoneNumber = administer.getPhone();
         String mac = SecureUtil.sha256(adminName + pass + salt + phoneNumber + identityNumberDigest);
         administer.setMac(mac);

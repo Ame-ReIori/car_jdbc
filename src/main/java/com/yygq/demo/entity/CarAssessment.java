@@ -24,7 +24,7 @@ public class CarAssessment {
      * the id of assessment
      */
     @Column(name = "ASSESSOR_ID")
-    private Long assessmentId;
+    private Long assessorId;
 
     /**
      * the id of admin
