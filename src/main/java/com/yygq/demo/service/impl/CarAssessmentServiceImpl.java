@@ -28,6 +28,7 @@ public class CarAssessmentServiceImpl implements CarAssessmentService {
 
     @Override
     public Boolean insert(CarAssessment carAssessment){
+        System.out.println(carAssessment.toString());
         return carAssessmentDao.insert(carAssessment) > 0;
     }
 

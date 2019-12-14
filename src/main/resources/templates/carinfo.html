@@ -398,7 +398,7 @@
                                     salerId: vm_carinfo.owner_id,
                                     dealPrice: vm_carinfo.car_price,
                                     //订单状态是0，表示未审核
-                                    orderState: 0
+                                    orderStatus: "0"
                                 }).then(response => {
                                     //成功之后就给前端传回来一个0，否则传回来一个1
                                     if(response.data == 0){

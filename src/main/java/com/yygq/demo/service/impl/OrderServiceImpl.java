@@ -35,6 +35,9 @@ public class OrderServiceImpl implements OrderService {
 
         String id = SecureUtil.sha256(order.getCreateTime().toString() + order.getCustomerId() + order.getSalerId() + order.getDealPrice().toString());
         order.setOrderId(id);
+
+        System.out.println(order.toString());
+
         return orderDao.insert(order) > 0;
     }
 

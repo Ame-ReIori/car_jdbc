@@ -100,3 +100,4 @@ public class indexController {
         return dict;
     }
 }
+//只有第一页有图。。

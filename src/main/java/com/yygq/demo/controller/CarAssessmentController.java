@@ -26,6 +26,9 @@ public class CarAssessmentController {
     }
 
 
+    /*
+    insert assessor_ID/window/wheel/light/collision failed!
+     */
     @RequestMapping(value = "/carAssessment")
     public Dict getAllCars(){
         List<CarAssessment> carAssessmentsList = carAssessmentService.getAll();
