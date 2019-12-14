@@ -54,9 +54,8 @@ public class carInfoController {
         CarAssessment carAssessment = carAssessmentService.getCarAssessment(carid);
         System.out.println(carAssessment.toString());
 
-        Assessor assessor = assessorService.getAssessor(new Long(1));
-        /*
-        Long assessorId = carAssessment.getAssessmentId();
+        //Assessor assessor = assessorService.getAssessor(new Long(1));
+        Long assessorId = carAssessment.getAssessorId();
         Assessor assessor = assessorService.getAssessor(assessorId);
 
         return Dict.create().set("car_type", car.getCarType()).set("owner_usr", userService.getUser(car.getOwnerId()).getName())
@@ -65,13 +64,14 @@ public class carInfoController {
                 .set("engine", carAssessment.getEngine()).set("windows", carAssessment.getWindow()).set("wheels", carAssessment.getWheel()).set("collision", carAssessment.getCollision())
                 .set("lights", carAssessment.getLight()).set("appearance", carAssessment.getAppearance()).set("dashboard", carAssessment.getDashboard()).set("chassis", carAssessment.getChassis())
                 .set("security_system", carAssessment.getSecuritySystem()).set("owner_id", car.getOwnerId());
-        */
+        /*
         return Dict.create().set("car_type", car.getCarType()).set("owner_usr", userService.getUser(car.getOwnerId()).getName())
                 .set("owner_tel", car.getOwnerTel()).set("transfer_time", car.getTransferTime())
                 .set("car_price", car.getPrice()).set("assessor_level", assessor.getLevel()).set("assessor_tel", assessor.getPhone())
                 .set("engine", "normal").set("windows", "good").set("wheels", "normal").set("collision", "no collision")
                 .set("lights", "normal").set("appearance", "good").set("dashboard", "good").set("chassis", "normal")
                 .set("security_system", "not bad").set("owner_id", car.getOwnerId());
+        */
     }
     @RequestMapping("/verify")
     @ResponseBody
@@ -83,8 +83,9 @@ public class carInfoController {
             List<User> userList = userService.getUsers(tool);
             User  u = userList.get(0);
 
+            System.out.println( "from web:"+user.toString());
             System.out.println( SecureUtil.sha256(user.getIdentityNumber()));
-            System.out.println( u.toString());
+            System.out.println( "from db:"+u.toString());
 
             String temp = user.getPassword();
             String salt = u.getSalt();
@@ -103,8 +104,10 @@ public class carInfoController {
         try {
             System.out.println(order.toString());
             //update customer wallet
-            User user = userService.getUser(order.getCustomerId());
-            user.setMoney(user.getMoney()-order.getDealPrice());
+            Long current_money = userService.getUser(order.getCustomerId()).getMoney()-order.getDealPrice();
+            User user = new User();
+            user.setMoney(current_money);
+
             userService.update(user,order.getCustomerId());
 
             //update the state of car
@@ -120,6 +123,4 @@ public class carInfoController {
         return "1";
     }
 }
-//为什么有时候会校验失败？身份证的哈希值不太一样，似乎好像还是之前一个用户的
-//一些数据尽管已经传了值，但还是显示null
 //订单一旦成交之后，卖家钱包应该增加金额，汽车资料从数据库中删除
