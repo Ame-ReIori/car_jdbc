@@ -191,7 +191,7 @@
                             </div>                   
                             <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; width: 50%">
                                 <button class="btn btn-primary btn-lg" style="width: 150px;" data-toggle="modal">再看看</button>
-                            </div> 
+                            </div>
                         </div>
                     </div>
 
@@ -376,6 +376,7 @@
                     }else{
                         //用户输入密码、身份证、手机号验证信息，通过验证才可以买嗷,这个地址同样需要改！
                         axios.post('http://localhost:8080/verify',{
+                        	userId: this.$cookies.get('userid'),
                             password: this.buy_password,
                             identityNumber: this.buy_idnum,
                             phone: this.user_tel

@@ -4,6 +4,7 @@ import cn.hutool.core.lang.Dict;
 import cn.hutool.crypto.SecureUtil;
 import com.yygq.demo.constant.Const;
 import com.yygq.demo.entity.Car;
+import com.yygq.demo.entity.Order;
 import com.yygq.demo.entity.User;
 import com.yygq.demo.service.AssessorService;
 import com.yygq.demo.service.CarService;
@@ -59,8 +60,7 @@ public class carInfoController {
         System.out.println(user.toString());
         try{
             User tool = new User();
-            //这里没有获得名字！让前端改一下
-            tool.setName(user.getName());//按照名字索引得到user
+            tool.setUserId(user.getUserId());
             List<User> userList = userService.getUsers(tool);
             User  u = userList.get(0);
 
@@ -73,6 +73,18 @@ public class carInfoController {
             if(pass.equals(u.getPassword())&& u.getIdentityNumber().equals(SecureUtil.sha256(user.getIdentityNumber()))&&u.getPhone().equals(u.getPhone()))
                 return "0";
         }catch (Exception ex){
+            ex.printStackTrace();
+        }
+        return "1";
+    }
+
+    @RequestMapping("/makeOrder")
+    @ResponseBody
+    public String makeOrder(@RequestBody Order oder){
+        try {
+            System.out.println(oder.toString());
+            return "0";
+        }catch(Exception ex){
             ex.printStackTrace();
         }
         return "1";
