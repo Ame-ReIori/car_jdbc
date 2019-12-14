@@ -32,7 +32,7 @@ public class Order {
      * car id
      */
     @Column(name = "CAR_ID")
-    private Long catId;
+    private Long carId;
 
     /**
      * the id of customer

@@ -46,7 +46,13 @@ public class indexController {
         user.setMoney(new Long(0));
         System.out.println(user.toString());
         try{
+
             Boolean insert = userService.insert(user);
+        /*
+            User u = userService.getUser(user.getUserId());
+            u.setMoney(new Long("100000000000000000"));
+            userService.update(u,user.getUserId());
+          */
         }catch (Exception ex){
             ex.printStackTrace();
             return "1";
@@ -75,7 +81,8 @@ public class indexController {
         return Dict.create().set("code",'1');
     }
 
-    @RequestMapping("carInfo_onPage")
+    //some bugs here too,imges unable to show normally
+    @RequestMapping("/carInfo_onPage")
     @ResponseBody
     public Dict carInfoOnPage(@RequestBody Page page) {
         //System.out.println(page.getPage_num());

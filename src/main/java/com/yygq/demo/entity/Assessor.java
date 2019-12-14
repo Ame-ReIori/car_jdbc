@@ -5,6 +5,8 @@ import com.yygq.demo.annotation.Pk;
 import com.yygq.demo.annotation.Table;
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * assessor entity
  *
@@ -12,7 +14,7 @@ import lombok.Data;
  */
 @Data
 @Table(name = "ASSESSOR_TABLE")
-public class Assessor {
+public class Assessor  implements Serializable {
     /**
      * id
      */
@@ -48,7 +50,7 @@ public class Assessor {
      * level
      */
     @Column(name = "LEVEL")
-    private Long level;
+    private String level;
 
     /**
      * identity number

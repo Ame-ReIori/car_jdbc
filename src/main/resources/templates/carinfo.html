@@ -326,7 +326,7 @@
             this.car_id = getUrlParams('car_id');
             console.log(this.car_id);
             //解析完car_id之后传给后端，进行查询，这里是需要你改的地方
-            axios.post('../test4.php',{
+            axios.post('http://localhost:8080/postcarInfo',{
                 //给后端传过去car_id
                 car_id: this.car_id
             }).then(response => {
@@ -375,10 +375,10 @@
                         alert('余额不足');
                     }else{
                         //用户输入密码、身份证、手机号验证信息，通过验证才可以买嗷,这个地址同样需要改！
-                        axios.post('../test.php',{
+                        axios.post('http://localhost:8080/verify',{
                             password: this.buy_password,
-                            identity_num: this.buy_idnum,
-                            user_tel: this.user_tel
+                            identityNumber: this.buy_idnum,
+                            phone: this.user_tel
                         }).then(response => {
                             //收到信息之后就去查询，如果信息验证正确就返回0，然后进行后续的操作
                             if(response.data == 0){
@@ -390,14 +390,14 @@
                                 var d = new Date();
                                 var order_date = d.toUTCString();
                                 //使用ajax发送给后端
-                                axios.post('../test.php',{
-                                    created_time: order_date,
-                                    car_id: vm_carinfo.car_id,
-                                    customer_id: this.$cookies.get('userid'),
-                                    owner_id: vm_carinfo.owner_id,
-                                    deal_price: vm_carinfo.car_price,
+                                axios.post('http://localhost:8080/makeOrder',{
+                                    createTime: order_date,
+                                    carId: vm_carinfo.car_id,
+                                    customerId: this.$cookies.get('userid'),
+                                    salerId: vm_carinfo.owner_id,
+                                    dealPrice: vm_carinfo.car_price,
                                     //订单状态是0，表示未审核
-                                    order_state: 0
+                                    orderState: 0
                                 }).then(response => {
                                     //成功之后就给前端传回来一个0，否则传回来一个1
                                     if(response.data == 0){
@@ -410,7 +410,7 @@
                                     console.log(error)
                                 })
                                 //最后购买成功后需要跳转的页面，这个需要你改
-                                window.location.href = "../index.html";
+                                window.location.href ='http://localhost:8080/index';
                             }else{
                                 alert('信息校验失败！');
                             }
