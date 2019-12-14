@@ -103,10 +103,9 @@ public class UserServiceImpl implements UserService {
             user.setRealName(realName);
         }
 
+        BeanUtil.copyProperties(user, exist, CopyOptions.create().setIgnoreNullValue(true));
         mac = SecureUtil.sha256(exist.getName() + pass + salt + exist.getPhone() + exist.getMoney() + realName + identityNumberDigest + exist.getStatus());
         user.setMac(mac);
-
-        BeanUtil.copyProperties(user, exist, CopyOptions.create().setIgnoreNullValue(true));
         exist.setLastUpdateTime(new DateTime());
         return userDao.update(exist, id) > 0;
     }
