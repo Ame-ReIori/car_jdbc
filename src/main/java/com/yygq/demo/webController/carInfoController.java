@@ -38,7 +38,7 @@ public class carInfoController {
     public Dict postImg(@RequestBody CarId carId) {
         System.out.println("postImg" + carId.getCar_id());
         Car car = carService.getCar(new Long(carId.getCar_id()));
-        return Dict.create().set("img", "/static/img/detail_car_img/car" + car.getCarId() + "_detail");
+        return Dict.create().set("img", "/img/detail_car_img/car" + car.getCarId() + "_detail.jpg");
     }
 
     @RequestMapping("/postcarInfo")

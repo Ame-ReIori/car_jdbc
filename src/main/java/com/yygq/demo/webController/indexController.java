@@ -95,7 +95,7 @@ public class indexController {
             carArrayList.add(carService.getCar(new Long(i)));
             Car car = carService.getCar(new Long(i + 4 * (n - 1)));
             dict.set("car_model" + i, car.getCarType()).set("car_intro" + i, "车主电话：" + car.getOwnerTel() + '\n' + "价格：" + car.getPrice() + '\n' + car.getTransferTime() + "手车")
-                    .set("car_id" + i, car.getCarId()).set("car_img" + i, "img/detail_car_img/car" + car.getCarId() + "_detail");
+                    .set("car_id" + i, car.getCarId()).set("car_img" + i, "img/detail_car_img/car" + car.getCarId() + "_detail.jpg");
         }
         return dict;
     }
