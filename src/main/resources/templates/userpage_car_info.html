@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="https://unpkg.com/vue-cookies@1.5.12/vue-cookies.js"></script>
+  	 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    
+    <title>用户中心</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap1.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/default-dark.css" id="theme" rel="stylesheet">
+   
+</head>
+
+<body class="fix-header fix-sidebar card-no-border">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader__figure"></div>
+            <p class="loader__label">loading...</p>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar">
+            <nav class="navbar top-navbar navbar-expand-md navbar-light">
+                <!-- ============================================================== -->
+                <!-- Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">
+                   
+                        <!-- Logo text -->
+                        <span>
+                            <img src="img/logo.png" alt="homepage" class="dark-logo img-responsive" />
+                        </span>
+                    </a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav mr-auto">
+                        <!-- This is  -->
+                        <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+                    </ul>
+                    <!-- ============================================================== -->
+                    <!-- User profile and search -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav my-lg-0">
+                        <!-- ============================================================== -->
+                        <!-- Search -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item hidden-xs-down search-box"> <a class="nav-link hidden-sm-down waves-effect waves-dark" href="javascript:void(0)"><i class="ti-search"></i></a>
+                            <form class="app-search">
+                                <input type="text" class="form-control" placeholder="Search & enter"> <a class="srh-btn"><i class="ti-close"></i></a>
+                            </form>
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- Profile -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect waves-dark" href="userpage_user_info.html"><img src="img/user_img.png" alt="user" class="profile-pic" /></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                         <li style="width: 60%; margin-left: auto;margin-right: auto" > <img :src="avatar_bar" alt="user" class="img-circle img-thumbnail" /></li>
+                        <!--#-->
+                        <li> <a class="waves-effect waves-dark  text-center" aria-expanded="false"><span id= "user_name" class="hide-menu" style="font-size: 25px">{{username_bar}}</span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="userpage_user_info.html" aria-expanded="false"><i class="mdi mdi-account-check"></i><span class="hide-menu">基本信息</span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="userpage_order_info.html" aria-expanded="false"><i class="mdi mdi-table"></i><span class="hide-menu">我的订单</span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="userpage_car_info.html" aria-expanded="false"><i class="mdi mdi-car"></i><span class="hide-menu">我的车辆</span></a></li>
+                        
+                    </ul>
+                    <div class="text-center m-t-30">
+                        <a href="userpage_car_info.html" class="btn waves-effect waves-light btn-info hidden-md-down">刷新</a>
+                    </div>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <div class="row page-titles">
+                    <div class="col-md-5 align-self-center">
+                        <h3 class="text-themecolor">我的车辆</h3>
+                    </div>
+                    <div class="col-md-7 align-self-center">
+                        <a v-on:click="logout" class="btn waves-effect waves-light btn-danger pull-right hidden-sm-down" style="color: white">注销</a>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
+                <div class="row" id="car_cards">
+                    <!-- column -->
+                    
+                    <div class="col-lg-4" v-for="my_car in my_car_datas" >
+                       <div class="card">
+                           	<img class="card-img-top img-responsive" :src="my_car.car_img" alt="Card image" style="width:80%; margin-left: auto;margin-right: auto;margin-top: 25px">
+                            <div class="card-body">
+                                <h4 class="card-title text-center">{{my_car.car_type}}</h4>
+                                <p class="card-text text-center">价格：{{my_car.price}}</p>
+                                <span class = "row" style="margin-left: auto;margin-right: auto; width: 80%">
+                                	<span class="col-lg-4"><button v-on:click="car_detail(my_car.car_ID)" class="btn btn-primary" style="color: white">详细信息</button></span>
+                                	<span class="col-lg-4"></span>
+                                	<span class="col-lg-4"><button type="button" class="btn btn-success">{{my_car.state}}</button></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End PAge Content -->
+                <!-- ============================================================== -->
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            <footer class="footer text-right">copyright © 2019 二手车交易 - support by  <a href="http://www.cssmoban.com/"  target="_blank">  www.cssmoban.com</a> </footer>
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+ <script src="js/jquery.min.js"></script>
+    <!-- Bootstrap popper Core JavaScript -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="js/perfect-scrollbar.jquery.min.js"></script>
+    <!--Wave Effects -->
+    <script src="js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="js/custom.min.js"></script>
+    <!-- ============================================================== -->
+    <!-- This page plugins -->
+    <!-- ============================================================== -->
+    
+    <!-- Chart JS -->
+    
+</body>
+<script>
+	//左边栏
+		var vm_bar_card = new Vue({
+		el: "#sidebarnav",
+		data: {
+			avatar_bar: 'img/user_avatars_img/5.jpg',
+			username_bar:'加载数据'
+			//
+		},
+		created: function(){
+			axios.post('http://localhost:8080/RequsetUserInfo',{
+				//后端收到post_code=15表示要向userpage界面传输部分用户的数据，
+				post_code : 15,
+				user_id:  this.$cookies.get('userid')
+			})
+			//下面这个箭头一定不能删掉，不然this的指向将不会是vue的实例
+			.then(response => {
+				var datajson = response.data;
+				//可修改键值名
+//				this.avatar_bar = datajson.avatar;
+				this.username_left = datajson.username;
+			})
+		}
+	});
+	
+	//注销
+	var vm_logout = new Vue({
+		el:"#logout_button",
+		methods:{
+			logout: function(){
+                this.$cookies.remove('username');
+                this.$cookies.remove('user_balance');
+                this.$cookies.remove('user_mail');
+                this.$cookies.remove('user_phone');
+				this.$cookise.remove('userid');
+                //跳转到主页，这个后端也需要改路径
+                window.location.href = 'http://localhost:8080/index';
+            }   
+		}
+	})
+	
+	//我的车辆卡片
+	var vm_car_card = new Vue({
+        el: '#car_cards',
+        data: {
+			my_car_datas: [
+			  
+			]
+		  },
+        created: function(){
+			axios.post('http://localhost:8080/userPageCarInfo',{
+				//后端收到post_code=35表示要传输车的部分数据，具体见表
+				
+				post_code : 35,
+				user_id:  this.$cookies.get('userid')
+			})
+			//下面这个箭头一定不能删掉，不然this的指向将不会是vue的实例
+			.then(response => {
+				var datajson = response.data;
+				
+				this.my_car_datas = datajson;
+				
+			})
+		},
+		methods:{
+			car_detail: function(car_ID){
+//				alert(car_ID);
+				
+				window.location.href = 'carinfo.html?car_id=' + car_ID;
+			}
+		}
+    });
+	
+	</script>
+</html>

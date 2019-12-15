@@ -1,5 +1,9 @@
 package com.yygq.demo.webController;
 
+/*
+ * rec_page
+ * @author:tfountain
+ * */
 public class Page {
     private int page_num;
 

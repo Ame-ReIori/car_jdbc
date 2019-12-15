@@ -13,7 +13,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-
+/*
+ * indexController
+ * @author:tfountain
+ * */
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,9 +40,11 @@ public class indexController {
     }
 
     @RequestMapping("index")
-    public String sayHello(){
+    public String sayHelloIndex(){
         return "index";
     }
+
+
     @RequestMapping("/logon")
     @ResponseBody
     public String logon(@RequestBody User user){

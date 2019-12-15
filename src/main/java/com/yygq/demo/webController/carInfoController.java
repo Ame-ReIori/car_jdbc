@@ -1,5 +1,9 @@
 package com.yygq.demo.webController;
 
+/*
+ * CarInfoController
+ * @author:tfountain
+ * */
 import cn.hutool.core.lang.Dict;
 import cn.hutool.crypto.SecureUtil;
 import com.yygq.demo.constant.Const;
@@ -103,6 +107,11 @@ public class carInfoController {
     public String makeOrder(@RequestBody Order order){
         try {
             System.out.println(order.toString());
+            if(order.getCustomerId().equals(order.getSalerId()))
+                return "2";
+            if(carService.getCar(order.getCarId()).getIsSold().equals(true))
+                return "1";
+
             //update customer wallet
             Long current_money = userService.getUser(order.getCustomerId()).getMoney()-order.getDealPrice();
             User user = new User();
@@ -120,7 +129,7 @@ public class carInfoController {
         }catch(Exception ex){
             ex.printStackTrace();
         }
-        return "1";
+        return "3";
     }
 }
 //订单一旦成交之后，卖家钱包应该增加金额，汽车资料从数据库中删除

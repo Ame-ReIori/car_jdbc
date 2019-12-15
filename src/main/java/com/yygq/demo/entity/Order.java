@@ -25,7 +25,7 @@ public class Order {
     /**
      * create time
      */
-    @Column(name = "CREATED_TIME")
+    @Column(name = "CREATE_TIME")
     private Date createTime;
 
     /**
@@ -57,5 +57,5 @@ public class Order {
      * status of order
      */
     @Column(name = "ORDER_STATE")
-    private String orderStatus;
+    private String orderState;
 }

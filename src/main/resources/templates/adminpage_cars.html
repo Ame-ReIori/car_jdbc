@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+ 
+    <title>管理员中心</title>
+    <!-- Bootstrap Core CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="https://unpkg.com/vue-cookies@1.5.12/vue-cookies.js"></script>
+   <script  src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+     <link href="css/bootstrap1.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/default-dark.css" id="theme" rel="stylesheet">
+   
+</head>
+
+<body class="fix-header fix-sidebar card-no-border">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader__figure"></div>
+            <p class="loader__label">loading...</p>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar">
+            <nav class="navbar top-navbar navbar-expand-md navbar-light">
+                <!-- ============================================================== -->
+                <!-- Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">
+                   
+                        <!-- Logo text -->
+                        <span>
+                            <img src="img/logo.png" alt="homepage" class="dark-logo img-responsive" />
+                        </span>
+                    </a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav mr-auto">
+                        <!-- This is  -->
+                        <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+                    </ul>
+                    <!-- ============================================================== -->
+                    <!-- car profile and search -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav my-lg-0">
+                        <!-- ============================================================== -->
+                        <!-- Search -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item hidden-xs-down search-box"> <a class="nav-link hidden-sm-down waves-effect waves-dark" href="javascript:void(0)"><i class="ti-search"></i></a>
+                            <form class="app-search">
+                                <input type="text" class="form-control" placeholder="Search & enter"> <a class="srh-btn"><i class="ti-close"></i></a>
+                            </form>
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- Profile -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect waves-dark" href="carpage_car_info.html"><img src="img/admin_avatar_default.png" alt="car" class="profile-pic" /></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                         <li style="width: 60%; margin-left: auto;margin-right: auto" > <img :src="avatar_bar" alt="car" class="img-circle img-thumbnail" /></li>
+                        <!--#-->
+                        <li> <a class="waves-effect waves-dark  text-center" aria-expanded="false"><span  class="hide-menu" style="font-size: 25px; color: white">{{admin_name}}</span></a></li>
+                    
+                        <li> <a class="waves-effect waves-dark  text-center" aria-expanded="false"><span  class="hide-menu" style="font-size: 15px; color: white">电话：{{admin_phone}}</span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="adminpage_users.html" aria-expanded="false"><i class="mdi mdi-account-check"></i><span class="hide-menu">用户</span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="adminpage_assessors.html" aria-expanded="false"><i class="mdi mdi-table"></i><span class="hide-menu">评估师</span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="adminpage_cars.html" aria-expanded="false"><i class="mdi mdi-table"></i><span class="hide-menu">待审核车辆</span></a></li>
+                        
+                        
+                    </ul>
+                    <div class="text-center m-t-30">
+                        <a href="adminpage_cars.html" class="btn waves-effect waves-light btn-info hidden-md-down">刷新</a>
+                    </div>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <div class="row page-titles">
+                    <div class="col-md-10 align-self-center">
+                        <h3 class="text-themecolor">待审核车辆</h3>
+                    </div>
+                    <div class="col-md-2 align-self-center" id="logout_button">
+                        <a v-on:click="logout" class="btn waves-effect waves-light btn-danger pull-right hidden-sm-down" style="color: white">注销</a>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
+                <!-- Row -->
+                <div class="row">
+                    <!-- column -->
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title"></h4>
+                                
+                                <div class="table-responsive">
+                                    <!--tableData是实际存储tabl的json数据-->
+                                    
+									<table class="table" >
+											
+											<tbody id="cars" class = "text-center">
+												<tr style="border-bottom: rgba(225,123,33,1.00);border-bottom-width: 2px">
+													<td>车型</td>
+													<td>车主</td>
+													<td>车主电话</td>
+													<td>报价</td>
+													<td>过户次数</td>
+													<td>评估状态</td>
+													<td>操作</td>
+													
+												</tr>
+												<tr v-for="car in car_datas"  style="border-bottom: rgba(54,142,216,1.00);border-bottom: 2px">
+													
+													<td>{{car.car_type}}</td>
+													<td>{{car.car_master}}</td>
+													<td>{{car.master_phone}}</td>
+													<td>{{car.price}}</td>
+													<td>{{car.transfer_time}}</td>
+													<td>{{car.assess_status}}</td>
+													
+													
+													<td><button class="btn btn-success" v-on:click="pass_car(car.car_ID)">审核通过</button></td>
+													
+												</tr>
+											</tbody>
+										</table>
+
+
+                                </div>
+                               
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Row -->
+                <!-- ============================================================== -->
+                <!-- End PAge Content -->
+                <!-- ============================================================== -->
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            <footer class="footer text-right">copyright © 2019 二手车交易 - support by  <a href="http://www.cssmoban.com/"  target="_blank">  www.cssmoban.com</a> </footer>
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+	<script src="js/jquery.min.js"></script>
+    <!-- Bootstrap popper Core JavaScript -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="js/perfect-scrollbar.jquery.min.js"></script>
+    <!--Wave Effects -->
+    <script src="js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="js/custom.min.js"></script>
+</body>
+<script>
+	//左边导航栏的Vue实例，图片处理暂无
+	var vm_bar_card = new Vue({
+		el: "#sidebarnav",
+		data: {
+			avatar_bar: 'img/admin_avatar_default.png',
+			admin_name: 'Admin',
+			admin_phone: ''
+			//
+		},
+		created: function(){
+			axios.post('test2.php',{
+				//后端收到post_code=15表示要向carpage界面传输部分用户的数据，
+				post_code : 60,
+				//post用户的ID
+				admin_id: this.$cookies.get('admin_id')
+			})
+			//下面这个箭头一定不能删掉，不然this的指向将不会是vue的实例
+			.then(response => {
+				var datajson = response.data;
+				//可以自己改键名
+				this.admin_name = datajson.admin_name;
+				
+				this.admin_phone = datajson.admin_phone;
+			})
+		}
+		
+	})
+	
+	//注销
+	var vm_logout = new Vue({
+		el:"#logout_button",
+		methods:{
+			logout: function(){
+                this.$cookies.remove('admin_name');
+                this.$cookies.remove('admin_phone');
+				this.$cookise.remove('admin_id');
+                //跳转到主页，这个后端也需要改路径
+                window.location.href = 'index.html';
+            }   
+		}
+	})
+	
+	//右边所有用户信息
+	var vm_cars = new Vue({
+		el: '#cars',
+		data: {
+
+			car_datas: [
+			]
+		  },
+		created: function(){
+			axios.post('test2.php',{
+				//后端收到post_code=80表示要 所有汽车 的数据，
+				post_code : 85,
+				admin_id:  this.$cookies.get('admin_id')
+			})
+			//下面这个箭头一定不能删掉，不然this的指向将不会是vue的实例
+			.then(response => {
+				var datajson = response.data;
+				
+				this.car_datas = datajson;
+				
+			})
+		},
+		methods:{
+			pass_car:function(car_ID){
+				alert(car_ID);
+				axios.post('test4.php',{
+					//后端收到post_code=85表示要 通过这辆车的审核
+					post_code : 90,
+					op_car_ID: car_ID,
+					admin_id:  this.$cookies.get('admin_id')
+				})
+				//下面这个箭头一定不能删掉，不然this的指向将不会是vue的实例
+				.then(response => {
+					var datajson = response.data
+					//下面进行赋值，注意datajson后面跟着的是键名，这个需要自己改
+					if(datajson == 1){
+						alert('审核通过');
+					}else{
+						alert('服务器错误');
+					}
+
+				})
+			}
+			
+		}
+	});
+
+</script>
+
+</html>
