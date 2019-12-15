@@ -74,7 +74,7 @@ public class AdministerServiceImpl implements AdministerService {
 
 
         BeanUtil.copyProperties(administer, exist, CopyOptions.create().setIgnoreNullValue(true));
-        mac = SecureUtil.sha256(exist.getAdministerId() + pass + salt + exist.getPhone() + identityNumberDigest);
+        mac = SecureUtil.sha256(exist.getAdminId() + pass + salt + exist.getPhone() + identityNumberDigest);
         administer.setMac(mac);
         exist.setLastUpdateTime(new DateTime());
         return administerDao.update(administer, id) > 0;

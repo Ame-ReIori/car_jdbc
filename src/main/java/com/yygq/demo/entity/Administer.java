@@ -18,9 +18,9 @@ public class Administer {
     /**
      * id
      */
-    @Pk(name = "ADMINISTER_ID")
-    @Column(name = "ADMINISTER_ID")
-    private Long administerId;
+    @Pk(name = "ADMIN_ID")
+    @Column(name = "ADMIN_ID")
+    private Long adminId;
 
     /**
      * admin's name
