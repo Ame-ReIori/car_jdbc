@@ -53,9 +53,8 @@ public class UserInfoController {
         User user = userService.getUser(userId);
         System.out.println(user.toString());
 
-        if (userInfoPost.getPost_code()==15)
-            return Dict.create().set("avatar",user.getAvatar()).set("user_name",user.getName());
-        return null;
+        //if (userInfoPost.getPost_code()==15)
+        return Dict.create().set("avatar",user.getAvatar()).set("user_name",user.getName());
     }
 
 
