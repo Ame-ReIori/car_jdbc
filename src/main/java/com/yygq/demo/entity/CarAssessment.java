@@ -38,7 +38,7 @@ public class CarAssessment {
     @Column(name = "ENGINE")
     private String engine;
 
-    @Column(name = "WINDOWS")
+    @Column(name = "WINDOW")
     private String window;
 
     @Column(name = "WHEELS")

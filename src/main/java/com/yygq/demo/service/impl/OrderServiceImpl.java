@@ -30,7 +30,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public Boolean insert(Order order){
-        order.setOrderStatus("0");
+        order.setOrderState("0");
         order.setCreateTime(new DateTime());
 
         String id = SecureUtil.sha256(order.getCreateTime().toString() + order.getCustomerId() + order.getSalerId() + order.getDealPrice().toString());

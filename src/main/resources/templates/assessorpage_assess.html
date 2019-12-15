@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+ 
+    <title>评估师中心</title>
+    <!-- Bootstrap Core CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="https://unpkg.com/vue-cookies@1.5.12/vue-cookies.js"></script>
+   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <link href="css/bootstrap1.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/default-dark.css" id="theme" rel="stylesheet">
+   
+</head>
+
+<body class="fix-header fix-sidebar card-no-border">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader__figure"></div>
+            <p class="loader__label">loading...</p>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar">
+            <nav class="navbar top-navbar navbar-expand-md navbar-light">
+                <!-- ============================================================== -->
+                <!-- Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">
+                   
+                        <!-- Logo text -->
+                        <span>
+                            <img src="img/logo.png" alt="homepage" class="dark-logo img-responsive" />
+                        </span>
+                    </a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav mr-auto">
+                        <!-- This is  -->
+                        <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+                    </ul>
+                    <!-- ============================================================== -->
+                    <!-- User profile and search -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav my-lg-0">
+                        <!-- ============================================================== -->
+                        <!-- Search -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item hidden-xs-down search-box"> <a class="nav-link hidden-sm-down waves-effect waves-dark" href="javascript:void(0)"><i class="ti-search"></i></a>
+                            <form class="app-search">
+                                <input type="text" class="form-control" placeholder="Search & enter"> <a class="srh-btn"><i class="ti-close"></i></a>
+                            </form>
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- Profile -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect waves-dark" href="userpage_user_info.html"><img src="img/assessor_avatar_default.jpg" alt="user" class="profile-pic" /></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                         <li style="width: 60%; margin-left: auto;margin-right: auto" > <img :src="avatar_bar" alt="user" class="img-circle img-thumbnail" /></li>
+                        <!--#-->
+                        <li> <a class="waves-effect waves-dark  text-center" aria-expanded="false"><span  class="hide-menu" style="font-size: 25px; color: white">{{assessor_name}}</span></a></li>
+                        <li> <a class="waves-effect waves-dark  text-center" aria-expanded="false"><span class="hide-menu" style="font-size: 15px; color: white">等级：{{assessor_level}}</span></a></li>
+                        <li> <a class="waves-effect waves-dark  text-center" aria-expanded="false"><span  class="hide-menu" style="font-size: 15px; color: white">电话：{{assessor_phone}}</span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="assessorpage_dealed_cars.html" aria-expanded="false"><i class="mdi mdi-account-check"></i><span class="hide-menu">我的评估</span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="assessorpage_waiting_cars.html" aria-expanded="false"><i class="mdi mdi-table"></i><span class="hide-menu">未评估车辆</span></a></li>
+                        
+                        
+                    </ul>
+                    <div class="text-center m-t-30">
+                        <a href="assessorpage_assess.html" class="btn waves-effect waves-light btn-info hidden-md-down">刷新</a>
+                    </div>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <div class="row page-titles">
+                    <div class="col-md-10 align-self-center">
+                        <h3 class="text-themecolor">评估表</h3>
+                    </div>
+                    <div class="col-md-2 align-self-center" id="logout_button">
+                        <a v-on:click="logout" class="btn waves-effect waves-light btn-danger pull-right hidden-sm-down" style="color: white">注销</a>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
+                <!-- Row -->
+                
+               <div class="row" id="assesscard">
+                    <!-- Column -->
+                    
+					
+							<div class="col-lg-2 col-xlg-2 col-md-2">
+
+						</div>
+						<!-- Column -->
+						<!-- Column -->
+						<div class="col-lg-8 col-xlg-8 col-md-8">
+							<div class="card">
+<!--							<img :src="assess_car_img" class="img-responsive center-block" style="width: 60%; margin-left: auto;margin-right: auto; margin-top: 30px">-->
+								<div class="card-body" >
+									<form class="form-horizontal form-material">
+										<div class="form-group">
+											<label class="col-md-12"><strong>发动机：</strong></label>
+											<div class="col-md-12">
+												<input type="text"  class="form-control form-control-line" v-model = "engine">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-md-12"><strong>车窗：</strong></label>
+											<div class="col-md-12">
+												<input type="text"  class="form-control form-control-line" v-model = "windows">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-md-12"><strong>轮胎：</strong></label>
+											<div class="col-md-12">
+												<input type="text"  class="form-control form-control-line" v-model = "wheels">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-md-12"><strong>碰撞情况：</strong></label>
+											<div class="col-md-12">
+												<input type="text"  class="form-control form-control-line" v-model = "collsion">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-md-12"><strong>车灯：</strong></label>
+											<div class="col-md-12">
+												<input type="text"  class="form-control form-control-line" v-model = "lights">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-md-12"><strong>外观：</strong></label>
+											<div class="col-md-12">
+												<input type="text"  class="form-control form-control-line" v-model = "appearance">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-md-12"><strong>仪表盘：</strong></label>
+											<div class="col-md-12">
+												<input type="text"  class="form-control form-control-line" v-model = "dashboard">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-md-12"><strong>底盘：</strong></label>
+											<div class="col-md-12">
+												<input type="text"  class="form-control form-control-line" v-model = "chassis">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-md-12"><strong>安全系统情况：</strong></label>
+											<div class="col-md-12">
+												<input type="text"  class="form-control form-control-line" v-model = "security_system">
+											</div>
+										</div>
+										
+
+										<div class="form-group">
+											<div style="margin-left: auto;margin-right: auto">
+												<button v-on:click="update" style="width: 200px;float: right"  type="button" class="btn btn-success" >上传</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+                   		<div class="col-lg-2 col-xlg-2 col-md-2">
+
+						</div>
+                    
+                    <!-- Column -->
+                </div>
+                <!-- Row -->
+                <!-- ============================================================== -->
+                <!-- End PAge Content -->
+                <!-- ============================================================== -->
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            <footer class="footer text-right">copyright © 2019 二手车交易 - support by  <a href="http://www.cssmoban.com/"  target="_blank">  www.cssmoban.com</a> </footer>
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+<script src="js/jquery.min.js"></script>
+    <!-- Bootstrap popper Core JavaScript -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="js/perfect-scrollbar.jquery.min.js"></script>
+    <!--Wave Effects -->
+    <script src="js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="js/custom.min.js"></script>
+</body>
+<script>
+	
+	
+	function getUrlParams(name){
+    	return decodeURIComponent((new RegExp('[?|&]'+name+'='+'([^&;]+?)(&|#|;|$)').exec(location.href)||[,""])[1].replace(/\+/g,'%20'))||null;
+  	}
+	
+	//左边导航栏的Vue实例，图片处理暂无
+	var vm_bar_card = new Vue({
+		el: "#sidebarnav",
+		data: {
+			avatar_bar: 'img/assessor_avatar_default.jpg',
+			assessor_name: 'Assessor',
+			assessor_level: '初级',
+			assessor_phone: ''
+		},
+		created: function(){
+			axios.post('http://localhost:8080/RequsetAssessorInfo',{
+				//后端收到post_code=35表示要向界面传输 评估师部分 的数据，
+				post_code : 35,
+				//post用户的ID
+				assessor_id: 1 //this.$cookies.get('assessor_id')
+			})
+			//下面这个箭头一定不能删掉，不然this的指向将不会是vue的实例
+			.then(response => {
+				var datajson = response.data;
+				//可以自己改
+				this.assessor_name = datajson.assessor_name;
+				this.assessor_level = datajson.assessor_level;
+				this.assessor_phone = datajson.assessor_phone;
+			})
+		}
+		
+	})
+	
+	//注销
+	var vm_logout = new Vue({
+		el:"#logout_button",
+		methods:{
+			logout: function(){
+                this.$cookies.remove('assessor_name');
+                this.$cookies.remove('assessor_phone');
+				this.$cookise.remove('assessor_id');
+                //跳转到主页，这个后端也需要改路径
+                window.location.href = 'http://localhost:8080/index';
+            }   
+		}
+	})
+	
+	//右边具体的评估条目
+	var vm_assesscard = new Vue({
+		el: "#assesscard",
+		data: {
+			engine:'',
+			windows:'',
+			wheels:'',
+			collsion:'',
+			lights:'',
+			appearance:'',
+			dashboard:'',
+			chassis:'',
+			security_system:'',
+			car_id:''
+		},
+		
+		methods:{
+			update: function(){
+				if(this.engine == '' || this.windows == '' || this.wheels == '' || this.collsion == '' || 
+				   this.lights == '' || this.appearance == '' || this.dashboard == '' || this.chassis == '' ||
+				  	this.security_system == ''){
+					alert('需要填写所有评测项');
+				}else{
+					
+					this.car_id = getUrlParams('car_id');
+					
+					if(this.car_id == ''){
+						alert('未定位到评测车辆');
+						
+					}
+					//地址修改 ，这里post很多数据，你收到的键名在表里已经写到，与这里一致，post_code==55
+					axios.post('http://localhost:8080/makeAssessment',{
+						post_code : 55,
+						assessor_id: 1 //this.$cookies.get('assessor_id'),
+						car_id:  this.car_id,
+						engine_as: this.engine,
+						windows_as: this.windows,
+						wheels_as: this.wheels,
+						collsion_as: this.collsion,
+						lights_as: this.lights,
+						appearance_as: this.appearance,
+						dashboard_as: this.dashboard,
+						chassis_as: this.chassis,
+						security_system_as: this.security_system
+					})
+					.then(function (response) {
+						
+						var response_num = response.data
+						//如果返回1就表示评估信息成功
+						if(response_num == 1){
+							alert('评估成功！');
+							
+							//跳转的网址
+							window.location.href = 'assessorpage_waiting_cars.html';
+						}else{
+							alert('服务器错误！');
+						}
+					})
+					.catch(function (error) {
+						console.log(error)
+					})
+				}
+			}
+		}
+		
+	})
+	
+</script>
+
+</html>

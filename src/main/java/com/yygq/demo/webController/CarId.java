@@ -1,5 +1,9 @@
 package com.yygq.demo.webController;
 
+/*
+ * recv_carIdInfo
+ * @author:tfountain
+ * */
 public class CarId {
     private int car_id;
 
