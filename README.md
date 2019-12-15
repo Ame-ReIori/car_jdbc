@@ -25,3 +25,26 @@ Make sure the environment!⬇️
 |src/main/resources/|static/|静态资源|
 |src/main/resources/|templates/|模板资源|
 |src/main/resources/|application.yml|配置资源|
+
+
+
+## 用法说明
+
+首页：http://localohost:8080/index，可跳转到汽车详情界面、订单界面与用户中心
+
+管理员界面：http://localhost:8080/adminInfo
+
+评估师界面：http://localhost:8080/assessorInfo
+
+## 注意事项
+
+- 个人数据库不一样，为了测试翻页我在data.sql里面写了十辆车，四个管理员，四个评估师，但是用户没怎么写，所以大家想测试的话，先多生成一点用户，不然从汽车的ownerID检索不到车主
+- html的位置不要随便更改
+- 评估师和管理员界面展示的都是ID为1的评估师和管理员，因为我懒得改前端了=.=
+- 因为不是真正从前段获得评估师ID，所以大家不要用评估师的启用或禁用功能，删除可用
+
+## BUG
+
+- 第二页的车辆index栏图片无法正常显示，问题不大=.=，回头再dede
+- 用户页面的”注销“无法跳转回首页
+

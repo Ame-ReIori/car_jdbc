@@ -242,11 +242,11 @@
 			//
 		},
 		created: function(){
-			axios.post('test.php',{
+			axios.post('http://localhost:8080//RequsetAdminInfo',{
 				//后端收到post_code=60表示要向界面传输 管理员部分 的数据，
 				post_code : 60,
 				//post用户的ID
-				admin_id: this.$cookies.get('admin_id')
+				admin_id: 1//this.$cookies.get('admin_id')
 			})
 			//下面这个箭头一定不能删掉，不然this的指向将不会是vue的实例
 			.then(response => {
@@ -265,11 +265,11 @@
 		el:"#logout_button",
 		methods:{
 			logout: function(){
-                this.$cookies.remove('admin_name');
-                this.$cookies.remove('admin_phone');
-				this.$cookise.remove('admin_id');
+                //this.$cookies.remove('admin_name');
+                //this.$cookies.remove('admin_phone');
+				//this.$cookise.remove('admin_id');
                 //跳转到主页，这个后端也需要改路径
-                window.location.href = 'index.html';
+                window.location.href = 'http://localhost:8080/index';
             }   
 		}
 	})
@@ -285,10 +285,10 @@
 			]
 		  },
 		created: function(){
-			axios.post('test2.php',{
+			axios.post('http://localhost:8080//adminPageUserInfo',{
 				//后端收到post_code=65表示要向界面传输 所有用户 的数据，
 				post_code : 65,
-				admin_id:  this.$cookies.get('admin_id')
+				admin_id: 1 //this.$cookies.get('admin_id')
 			})
 			//下面这个箭头一定不能删掉，不然this的指向将不会是vue的实例
 			.then(response => {
@@ -301,11 +301,11 @@
 		methods:{
 			up_user:function(user_ID){
 //				alert(user_ID);
-				axios.post('test4.php',{
+				axios.post('http://localhost:8080/opOnUser',{
 					//后端收到post_code=70表示要 启用这个用户，
 					post_code : 70,
 					op_user_ID: user_ID,
-					admin_id:  this.$cookies.get('admin_id')
+					admin_id: 1 //this.$cookies.get('admin_id')
 				})
 				//下面这个箭头一定不能删掉，不然this的指向将不会是vue的实例
 				.then(response => {
@@ -321,11 +321,11 @@
 			},
 			ban_user:function(user_ID){
 //				alert();
-				axios.post('test4.php',{
+				axios.post('http://localhost:8080/opOnUser',{
 					//后端收到post_code=75表示要 禁用这个用户
 					post_code : 75,
 					op_user_ID: user_ID,
-					admin_id:  this.$cookies.get('admin_id')
+					admin_id: 1 //this.$cookies.get('admin_id')
 				})
 				//下面这个箭头一定不能删掉，不然this的指向将不会是vue的实例
 				.then(response => {
@@ -341,11 +341,11 @@
 			},
 			del_user:function(user_ID){
 //				alert(user_ID);
-				axios.post('test4.php',{
+				axios.post('http://localhost:8080/opOnUser',{
 					//后端收到post_code=25表示要 逻辑删除这个用户
 					post_code : 80,
 					op_user_ID: user_ID,
-					admin_id:  this.$cookies.get('admin_id')
+					admin_id: 1 //this.$cookies.get('admin_id')
 				})
 				//下面这个箭头一定不能删掉，不然this的指向将不会是vue的实例
 				.then(response => {

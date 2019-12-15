@@ -41,13 +41,13 @@ public class CarAssessment {
     @Column(name = "WINDOW")
     private String window;
 
-    @Column(name = "WHEELS")
+    @Column(name = "WHEEL")
     private String wheel;
 
     @Column(name = "COLLISION")
     private String collision;
 
-    @Column(name = "LIGHTS")
+    @Column(name = "LIGHT")
     private String light;
 
     @Column(name = "APPEARANCE")

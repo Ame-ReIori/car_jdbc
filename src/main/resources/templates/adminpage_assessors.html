@@ -237,11 +237,11 @@
 			//
 		},
 		created: function(){
-			axios.post('test.php',{
+			axios.post('http://localhost:8080/RequsetAdminInfo',{
 				//后端收到post_code=15表示要向userpage界面传输部分用户的数据，
 				post_code : 60,
 				//post用户的ID
-				admin_id: this.$cookies.get('admin_id')
+				admin_id: 1//this.$cookies.get('admin_id')
 			})
 			//下面这个箭头一定不能删掉，不然this的指向将不会是vue的实例
 			.then(response => {
@@ -260,11 +260,11 @@
 		el:"#logout_button",
 		methods:{
 			logout: function(){
-                this.$cookies.remove('admin_name');
-                this.$cookies.remove('admin_phone');
-				this.$cookise.remove('admin_id');
+                //this.$cookies.remove('admin_name');
+                //this.$cookies.remove('admin_phone');
+				//this.$cookise.remove('admin_id');
                 //跳转到主页，这个后端也需要改路径
-                window.location.href = 'index.html';
+                window.location.href = 'http://localhost:8080/index';
             }   
 		}
 	})
@@ -278,10 +278,10 @@
 			]
 		  },
 		created: function(){
-			axios.post('test2.php',{
+			axios.post('http://localhost:8080/adminPageAssessorInfo',{
 				//后端收到post_code=95表示要向传输 所有评估师 数据，
 				post_code : 95,
-				admin_id:  this.$cookies.get('admin_id')
+				admin_id:  1//this.$cookies.get('admin_id')
 			})
 			//下面这个箭头一定不能删掉，不然this的指向将不会是vue的实例
 			.then(response => {
@@ -294,11 +294,11 @@
 		methods:{
 			up_assessor:function(assessor_ID){
 				//alert(assessor_ID);
-				axios.post('test4.php',{
+				axios.post('http://localhost:8080/opOnAssessor',{
 					//后端收到post_code=100表示要 启用评估师
 					post_code : 100,
 					op_assessor_ID: assessor_ID,
-					admin_id:  this.$cookies.get('admin_id')
+					admin_id: 1 //this.$cookies.get('admin_id')
 				})
 				//下面这个箭头一定不能删掉，不然this的指向将不会是vue的实例
 				.then(response => {
@@ -314,11 +314,11 @@
 			},
 			ban_assessor:function(assessor_ID){
 //				alert(assessor_ID);
-				axios.post('test4.php',{
+				axios.post('http://localhost:8080/opOnAssessor',{
 					//后端收到post_code=105表示要向禁用 评估师
 					post_code : 105,
 					op_assessor_ID: assessor_ID,
-					admin_id:  this.$cookies.get('admin_id')
+					admin_id:  1//this.$cookies.get('admin_id')
 				})
 				//下面这个箭头一定不能删掉，不然this的指向将不会是vue的实例
 				.then(response => {
@@ -334,11 +334,11 @@
 			},
 			del_assessor:function(assessor_ID){
 //				alert(assessor_ID);
-				axios.post('test4.php',{
+				axios.post('http://localhost:8080/opOnAssessor',{
 					//后端收到post_code=110表示要 逻辑删除评估师
 					post_code : 110,
 					op_assessor_ID: assessor_ID,
-					admin_id:  this.$cookies.get('admin_id')
+					admin_id:  1//this.$cookies.get('admin_id')
 				})
 				//下面这个箭头一定不能删掉，不然this的指向将不会是vue的实例
 				.then(response => {

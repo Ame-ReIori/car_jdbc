@@ -310,9 +310,9 @@
 		el:"#logout_button",
 		methods:{
 			logout: function(){
-                this.$cookies.remove('assessor_name');
-                this.$cookies.remove('assessor_phone');
-				this.$cookise.remove('assessor_id');
+                //this.$cookies.remove('assessor_name');
+                //this.$cookies.remove('assessor_phone');
+				//this.$cookise.remove('assessor_id');
                 //跳转到主页，这个后端也需要改路径
                 window.location.href = 'http://localhost:8080/index';
             }   
@@ -352,7 +352,7 @@
 					//地址修改 ，这里post很多数据，你收到的键名在表里已经写到，与这里一致，post_code==55
 					axios.post('http://localhost:8080/makeAssessment',{
 						post_code : 55,
-						assessor_id: 1 //this.$cookies.get('assessor_id'),
+						assessor_id: 1, //this.$cookies.get('assessor_id'),
 						car_id:  this.car_id,
 						engine_as: this.engine,
 						windows_as: this.windows,

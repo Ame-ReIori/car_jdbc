@@ -31,6 +31,7 @@ public class AssessorServiceImpl implements AssessorService {
 
     @Override
     public Boolean insert(Assessor assessor){
+        assessor.setStatus(1);
         String identityNumberDigest = null;
         String tmp = assessor.getPassword();
         String salt = IdUtil.simpleUUID();

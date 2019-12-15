@@ -28,6 +28,9 @@ public class Assessor  implements Serializable {
     @Column(name = "NAME")
     private String name;
 
+    @Column(name = "STATUS")
+    private int status;
+
     /**
      * password
      */
