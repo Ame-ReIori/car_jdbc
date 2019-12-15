@@ -9575,3 +9575,803 @@ org.springframework.dao.EmptyResultDataAccessException: Incorrect result size: e
 2019-12-15 10:46:42.389 DEBUG 2668 --- [http-nio-8080-exec-9] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1  and `IS_ASSESS` = ? 
 2019-12-15 10:46:42.389 DEBUG 2668 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
 2019-12-15 10:46:42.389 DEBUG 2668 --- [http-nio-8080-exec-9] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [false]
+2019-12-15 11:50:24.752  INFO 35608 --- [restartedMain] com.yygq.demo.DemoApplication            : Starting DemoApplication on AmeReIorideMacBook-Pro.local with PID 35608 (/Users/ame/Desktop/springstu/demo/target/classes started by ame in /Users/ame/Desktop/springstu/demo)
+2019-12-15 11:50:24.755 DEBUG 35608 --- [restartedMain] com.yygq.demo.DemoApplication            : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2019-12-15 11:50:24.755  INFO 35608 --- [restartedMain] com.yygq.demo.DemoApplication            : The following profiles are active: dev
+2019-12-15 11:50:24.796  INFO 35608 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-15 11:50:24.797  INFO 35608 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-15 11:50:25.831  INFO 35608 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-15 11:50:25.845  INFO 35608 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-15 11:50:25.846  INFO 35608 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-15 11:50:25.917  INFO 35608 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-15 11:50:25.918  INFO 35608 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1121 ms
+2019-12-15 11:50:25.959  WARN 35608 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adminController' defined in file [/Users/ame/Desktop/springstu/demo/target/classes/com/yygq/demo/controller/AdminController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.yygq.demo.service.AdministerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2019-12-15 11:50:25.961  INFO 35608 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-12-15 11:50:25.983  INFO 35608 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-15 11:50:26.105 ERROR 35608 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.yygq.demo.controller.AdministerController required a bean of type 'com.yygq.demo.service.AdministerService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.yygq.demo.service.AdministerService' in your configuration.
+
+2019-12-15 11:51:49.027  INFO 35611 --- [restartedMain] com.yygq.demo.DemoApplication            : Starting DemoApplication on AmeReIorideMacBook-Pro.local with PID 35611 (/Users/ame/Desktop/springstu/demo/target/classes started by ame in /Users/ame/Desktop/springstu/demo)
+2019-12-15 11:51:49.029 DEBUG 35611 --- [restartedMain] com.yygq.demo.DemoApplication            : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2019-12-15 11:51:49.029  INFO 35611 --- [restartedMain] com.yygq.demo.DemoApplication            : The following profiles are active: dev
+2019-12-15 11:51:49.068  INFO 35611 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-15 11:51:49.069  INFO 35611 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-15 11:51:50.091  INFO 35611 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-15 11:51:50.100  INFO 35611 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-15 11:51:50.101  INFO 35611 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-15 11:51:50.169  INFO 35611 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-15 11:51:50.169  INFO 35611 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1100 ms
+2019-12-15 11:51:50.227  WARN 35611 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'administerController' defined in file [/Users/ame/Desktop/springstu/demo/target/classes/com/yygq/demo/controller/AdministerController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.yygq.demo.service.AdministerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2019-12-15 11:51:50.229  INFO 35611 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-12-15 11:51:50.251  INFO 35611 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-15 11:51:50.375 ERROR 35611 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.yygq.demo.controller.AdministerController required a bean of type 'com.yygq.demo.service.AdministerService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.yygq.demo.service.AdministerService' in your configuration.
+
+2019-12-15 11:53:57.838  INFO 35614 --- [restartedMain] com.yygq.demo.DemoApplication            : Starting DemoApplication on AmeReIorideMacBook-Pro.local with PID 35614 (/Users/ame/Desktop/springstu/demo/target/classes started by ame in /Users/ame/Desktop/springstu/demo)
+2019-12-15 11:53:57.841 DEBUG 35614 --- [restartedMain] com.yygq.demo.DemoApplication            : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2019-12-15 11:53:57.841  INFO 35614 --- [restartedMain] com.yygq.demo.DemoApplication            : The following profiles are active: dev
+2019-12-15 11:53:57.885  INFO 35614 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-15 11:53:57.885  INFO 35614 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-15 11:53:58.917  INFO 35614 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-15 11:53:58.927  INFO 35614 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-15 11:53:58.929  INFO 35614 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-15 11:53:58.995  INFO 35614 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-15 11:53:58.996  INFO 35614 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1111 ms
+2019-12-15 11:53:59.088  INFO 35614 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : SpringBootDemoHikariCP - Starting...
+2019-12-15 11:53:59.275  INFO 35614 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : SpringBootDemoHikariCP - Start completed.
+2019-12-15 11:53:59.393  INFO 35614 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-15 11:53:59.587  INFO 35614 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-15 11:53:59.664  INFO 35614 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
+2019-12-15 11:53:59.793  INFO 35614 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-15 11:53:59.796  INFO 35614 --- [restartedMain] com.yygq.demo.DemoApplication            : Started DemoApplication in 2.449 seconds (JVM running for 2.794)
+2019-12-15 11:54:09.352  INFO 35614 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-15 11:54:09.353  INFO 35614 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-15 11:54:09.359  INFO 35614 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2019-12-15 11:54:10.542 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 11:54:10.584 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:54:10.591 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:54:10.606 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:54:10.606 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:54:10.607 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 11:54:10.609 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:54:10.609 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 11:54:10.611 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:54:10.611 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 11:54:10.612 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 11:54:30.221 DEBUG 35614 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE 1 = 1
+2019-12-15 11:54:56.344 DEBUG 35614 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: INSERT INTO `USER_TABLE` (`NAME`,`PASSWORD`,`SALT`,`PHONE`,`MONEY`,`EMAIL`,`IDENTITY_NUMBER`,`REAL_NAME`,`MAC`) VALUES (?,?,?,?,?,?,?,?,?)
+2019-12-15 11:54:56.345 DEBUG 35614 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: ["aaa","cbf7dd81e09e991ec5548abc5a613ef36411c0e43002eb1cdd178c40a68c6152","36dfce8969484503b7aa8ce5c630ce2a","aaa",0,"aaa","9834876dcfb05cb167a5c24953eba58c4ac89b1adf57f28f2f9d09af107ee8f0","aaa","b6f2a28df94bc37868ce7aeed7a5c5caca9785cde6e90b5a7a8fc5564aeb579d"]
+2019-12-15 11:54:58.058 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 11:54:58.061 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:54:58.061 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:54:58.063 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:54:58.063 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:54:58.065 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 11:54:58.068 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:54:58.068 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 11:54:58.070 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:54:58.071 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 11:54:58.072 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 11:55:03.374 DEBUG 35614 --- [http-nio-8080-exec-3] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE 1 = 1  and `NAME` = ? 
+2019-12-15 11:55:03.374 DEBUG 35614 --- [http-nio-8080-exec-3] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: ["aaa"]
+2019-12-15 11:55:03.722 DEBUG 35614 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 11:55:03.724 DEBUG 35614 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:55:03.725 DEBUG 35614 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:55:03.727 DEBUG 35614 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:55:03.728 DEBUG 35614 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:55:03.729 DEBUG 35614 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 11:55:03.736 DEBUG 35614 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:55:03.736 DEBUG 35614 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 11:55:03.739 DEBUG 35614 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:55:03.740 DEBUG 35614 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 11:55:03.743 DEBUG 35614 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 11:55:09.968 DEBUG 35614 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE USER_ID = ?
+2019-12-15 11:55:09.968 DEBUG 35614 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE USER_ID = ?
+2019-12-15 11:55:09.969 DEBUG 35614 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [17]
+2019-12-15 11:55:09.969 DEBUG 35614 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [17]
+2019-12-15 11:55:54.779 DEBUG 35614 --- [http-nio-8080-exec-7] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE USER_ID = ?
+2019-12-15 11:55:54.781 DEBUG 35614 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1  and `OWNER_ID` = ? 
+2019-12-15 11:55:54.781 DEBUG 35614 --- [http-nio-8080-exec-7] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [17]
+2019-12-15 11:55:54.781 DEBUG 35614 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [17]
+2019-12-15 11:55:56.687 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE USER_ID = ?
+2019-12-15 11:55:56.687 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [17]
+2019-12-15 11:55:56.688 DEBUG 35614 --- [http-nio-8080-exec-8] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE USER_ID = ?
+2019-12-15 11:55:56.688 DEBUG 35614 --- [http-nio-8080-exec-8] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [17]
+2019-12-15 11:56:01.225 DEBUG 35614 --- [http-nio-8080-exec-3] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE USER_ID = ?
+2019-12-15 11:56:01.226 DEBUG 35614 --- [http-nio-8080-exec-3] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [17]
+2019-12-15 11:56:01.239 DEBUG 35614 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `ORDER_TABLE` WHERE 1 = 1  and `CUSTOMER_ID` = ? 
+2019-12-15 11:56:01.239 DEBUG 35614 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [17]
+2019-12-15 11:56:02.657 DEBUG 35614 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE USER_ID = ?
+2019-12-15 11:56:02.658 DEBUG 35614 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [17]
+2019-12-15 11:56:02.658 DEBUG 35614 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE USER_ID = ?
+2019-12-15 11:56:02.658 DEBUG 35614 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [17]
+2019-12-15 11:56:03.000 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE USER_ID = ?
+2019-12-15 11:56:03.000 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [17]
+2019-12-15 11:56:03.000 DEBUG 35614 --- [http-nio-8080-exec-8] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1  and `OWNER_ID` = ? 
+2019-12-15 11:56:03.001 DEBUG 35614 --- [http-nio-8080-exec-8] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [17]
+2019-12-15 11:56:03.420 DEBUG 35614 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE USER_ID = ?
+2019-12-15 11:56:03.421 DEBUG 35614 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [17]
+2019-12-15 11:56:03.421 DEBUG 35614 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE USER_ID = ?
+2019-12-15 11:56:03.421 DEBUG 35614 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [17]
+2019-12-15 11:56:04.218 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 11:56:04.221 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:56:04.222 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:56:04.224 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:56:04.224 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:56:04.227 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 11:56:04.229 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:56:04.229 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 11:56:04.231 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:56:04.232 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 11:56:04.243 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 11:56:27.198 DEBUG 35614 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:56:27.198 DEBUG 35614 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:56:27.198 DEBUG 35614 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:56:27.198 DEBUG 35614 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:56:27.208 DEBUG 35614 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_DETECTION_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:56:27.209 DEBUG 35614 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:56:27.220 DEBUG 35614 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `ASSESSOR_TABLE` WHERE ASSESS_ID = ?
+2019-12-15 11:56:27.220 DEBUG 35614 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:56:27.223 DEBUG 35614 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE USER_ID = ?
+2019-12-15 11:56:27.223 DEBUG 35614 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:56:36.102 DEBUG 35614 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 11:56:36.104 DEBUG 35614 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:56:36.104 DEBUG 35614 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:56:36.105 DEBUG 35614 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:56:36.105 DEBUG 35614 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:56:36.107 DEBUG 35614 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 11:56:36.108 DEBUG 35614 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:56:36.108 DEBUG 35614 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 11:56:36.112 DEBUG 35614 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:56:36.112 DEBUG 35614 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 11:56:36.115 DEBUG 35614 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 11:56:39.337 DEBUG 35614 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:56:39.337 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:56:39.337 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:56:39.337 DEBUG 35614 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:56:39.339 DEBUG 35614 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_DETECTION_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:56:39.339 DEBUG 35614 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:56:39.343 DEBUG 35614 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `ASSESSOR_TABLE` WHERE ASSESS_ID = ?
+2019-12-15 11:56:39.343 DEBUG 35614 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:56:39.345 DEBUG 35614 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE USER_ID = ?
+2019-12-15 11:56:39.345 DEBUG 35614 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:56:45.884 DEBUG 35614 --- [http-nio-8080-exec-9] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 11:56:45.887 DEBUG 35614 --- [http-nio-8080-exec-9] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:56:45.887 DEBUG 35614 --- [http-nio-8080-exec-9] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:56:45.889 DEBUG 35614 --- [http-nio-8080-exec-9] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:56:45.890 DEBUG 35614 --- [http-nio-8080-exec-9] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:56:45.891 DEBUG 35614 --- [http-nio-8080-exec-9] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 11:56:45.893 DEBUG 35614 --- [http-nio-8080-exec-9] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:56:45.893 DEBUG 35614 --- [http-nio-8080-exec-9] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 11:56:45.896 DEBUG 35614 --- [http-nio-8080-exec-9] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:56:45.896 DEBUG 35614 --- [http-nio-8080-exec-9] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 11:56:45.902 DEBUG 35614 --- [http-nio-8080-exec-9] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 11:56:48.126 DEBUG 35614 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:56:48.126 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:56:48.126 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 11:56:48.126 DEBUG 35614 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 11:56:48.128 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_DETECTION_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:56:48.128 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 11:56:48.130 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `ASSESSOR_TABLE` WHERE ASSESS_ID = ?
+2019-12-15 11:56:48.130 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:56:48.132 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE USER_ID = ?
+2019-12-15 11:56:48.132 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:58:02.390 DEBUG 35614 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 11:58:02.403 DEBUG 35614 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:58:02.404 DEBUG 35614 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:58:02.410 DEBUG 35614 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:58:02.410 DEBUG 35614 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:58:02.413 DEBUG 35614 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 11:58:02.422 DEBUG 35614 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:58:02.422 DEBUG 35614 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 11:58:02.426 DEBUG 35614 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:58:02.426 DEBUG 35614 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 11:58:02.430 DEBUG 35614 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 11:58:05.907 DEBUG 35614 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:58:05.907 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:58:05.908 DEBUG 35614 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 11:58:05.908 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 11:58:05.911 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_DETECTION_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:58:05.912 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 11:58:05.914 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `ASSESSOR_TABLE` WHERE ASSESS_ID = ?
+2019-12-15 11:58:05.915 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:58:05.916 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE USER_ID = ?
+2019-12-15 11:58:05.916 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:58:09.784 DEBUG 35614 --- [http-nio-8080-exec-7] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 11:58:09.786 DEBUG 35614 --- [http-nio-8080-exec-7] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:58:09.786 DEBUG 35614 --- [http-nio-8080-exec-7] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:58:09.788 DEBUG 35614 --- [http-nio-8080-exec-7] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:58:09.788 DEBUG 35614 --- [http-nio-8080-exec-7] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:58:09.789 DEBUG 35614 --- [http-nio-8080-exec-7] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 11:58:09.792 DEBUG 35614 --- [http-nio-8080-exec-7] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:58:09.792 DEBUG 35614 --- [http-nio-8080-exec-7] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 11:58:09.795 DEBUG 35614 --- [http-nio-8080-exec-7] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:58:09.795 DEBUG 35614 --- [http-nio-8080-exec-7] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 11:58:09.797 DEBUG 35614 --- [http-nio-8080-exec-7] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 11:58:17.957 DEBUG 35614 --- [http-nio-8080-exec-9] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:58:17.957 DEBUG 35614 --- [http-nio-8080-exec-9] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 11:58:17.957 DEBUG 35614 --- [http-nio-8080-exec-8] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:58:17.957 DEBUG 35614 --- [http-nio-8080-exec-8] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 11:58:17.960 DEBUG 35614 --- [http-nio-8080-exec-8] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_DETECTION_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:58:17.960 DEBUG 35614 --- [http-nio-8080-exec-8] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 11:58:17.965 DEBUG 35614 --- [http-nio-8080-exec-8] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `ASSESSOR_TABLE` WHERE ASSESS_ID = ?
+2019-12-15 11:58:17.965 DEBUG 35614 --- [http-nio-8080-exec-8] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:58:17.967 DEBUG 35614 --- [http-nio-8080-exec-8] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE USER_ID = ?
+2019-12-15 11:58:17.967 DEBUG 35614 --- [http-nio-8080-exec-8] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:59:04.229 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 11:59:04.234 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:59:04.234 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:59:04.236 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:59:04.236 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:59:04.237 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 11:59:04.239 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:59:04.239 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 11:59:04.240 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:59:04.241 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 11:59:04.242 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 11:59:07.844 DEBUG 35614 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 11:59:07.847 DEBUG 35614 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:59:07.847 DEBUG 35614 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:59:07.850 DEBUG 35614 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:59:07.850 DEBUG 35614 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:59:07.851 DEBUG 35614 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 11:59:07.853 DEBUG 35614 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:59:07.853 DEBUG 35614 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 11:59:07.855 DEBUG 35614 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:59:07.855 DEBUG 35614 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 11:59:07.857 DEBUG 35614 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 11:59:13.449 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:59:13.449 DEBUG 35614 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:59:13.450 DEBUG 35614 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:59:13.450 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:59:13.454 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_DETECTION_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:59:13.454 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:59:13.455 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `ASSESSOR_TABLE` WHERE ASSESS_ID = ?
+2019-12-15 11:59:13.456 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:59:13.457 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE USER_ID = ?
+2019-12-15 11:59:13.457 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:59:17.140 DEBUG 35614 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 11:59:17.141 DEBUG 35614 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:59:17.141 DEBUG 35614 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:59:17.143 DEBUG 35614 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:59:17.143 DEBUG 35614 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:59:17.144 DEBUG 35614 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 11:59:17.146 DEBUG 35614 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:59:17.146 DEBUG 35614 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 11:59:17.147 DEBUG 35614 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:59:17.147 DEBUG 35614 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 11:59:17.148 DEBUG 35614 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 11:59:22.796 DEBUG 35614 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:59:22.796 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:59:22.796 DEBUG 35614 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 11:59:22.796 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 11:59:22.798 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_DETECTION_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:59:22.798 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 11:59:22.799 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `ASSESSOR_TABLE` WHERE ASSESS_ID = ?
+2019-12-15 11:59:22.799 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:59:22.803 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE USER_ID = ?
+2019-12-15 11:59:22.803 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:59:25.713 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 11:59:25.715 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:59:25.715 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:59:25.716 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:59:25.716 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:59:25.718 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 11:59:25.719 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:59:25.719 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 11:59:25.721 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:59:25.721 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 11:59:25.723 DEBUG 35614 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 11:59:33.598 DEBUG 35614 --- [http-nio-8080-exec-9] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:59:33.598 DEBUG 35614 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:59:33.599 DEBUG 35614 --- [http-nio-8080-exec-9] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 11:59:33.599 DEBUG 35614 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 11:59:33.600 DEBUG 35614 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_DETECTION_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:59:33.601 DEBUG 35614 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 11:59:33.602 DEBUG 35614 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `ASSESSOR_TABLE` WHERE ASSESS_ID = ?
+2019-12-15 11:59:33.602 DEBUG 35614 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:59:33.603 DEBUG 35614 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE USER_ID = ?
+2019-12-15 11:59:33.603 DEBUG 35614 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:59:36.174 DEBUG 35614 --- [http-nio-8080-exec-8] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 11:59:36.175 DEBUG 35614 --- [http-nio-8080-exec-8] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:59:36.175 DEBUG 35614 --- [http-nio-8080-exec-8] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:59:36.177 DEBUG 35614 --- [http-nio-8080-exec-8] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:59:36.177 DEBUG 35614 --- [http-nio-8080-exec-8] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 11:59:36.178 DEBUG 35614 --- [http-nio-8080-exec-8] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 11:59:36.179 DEBUG 35614 --- [http-nio-8080-exec-8] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:59:36.179 DEBUG 35614 --- [http-nio-8080-exec-8] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 11:59:36.181 DEBUG 35614 --- [http-nio-8080-exec-8] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 11:59:36.181 DEBUG 35614 --- [http-nio-8080-exec-8] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 11:59:36.183 DEBUG 35614 --- [http-nio-8080-exec-8] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 12:00:17.211 DEBUG 35614 --- [http-nio-8080-exec-9] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 12:00:17.211 DEBUG 35614 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 12:00:17.211 DEBUG 35614 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 12:00:17.211 DEBUG 35614 --- [http-nio-8080-exec-9] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 12:00:17.218 DEBUG 35614 --- [http-nio-8080-exec-9] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_DETECTION_TABLE` WHERE CAR_ID = ?
+2019-12-15 12:00:17.218 DEBUG 35614 --- [http-nio-8080-exec-9] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 12:00:17.219 DEBUG 35614 --- [http-nio-8080-exec-9] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `ASSESSOR_TABLE` WHERE ASSESS_ID = ?
+2019-12-15 12:00:17.220 DEBUG 35614 --- [http-nio-8080-exec-9] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 12:00:17.221 DEBUG 35614 --- [http-nio-8080-exec-9] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE USER_ID = ?
+2019-12-15 12:00:17.221 DEBUG 35614 --- [http-nio-8080-exec-9] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 12:00:18.680 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 12:00:18.681 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 12:00:18.682 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 12:00:18.683 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 12:00:18.683 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 12:00:18.684 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 12:00:18.685 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 12:00:18.686 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 12:00:18.687 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 12:00:18.687 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 12:00:18.688 DEBUG 35614 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 12:00:33.009 DEBUG 35614 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE 1 = 1  and `NAME` = ? 
+2019-12-15 12:00:33.009 DEBUG 35614 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: ["tfountain"]
+2019-12-15 12:00:36.697 DEBUG 35614 --- [http-nio-8080-exec-7] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE 1 = 1  and `NAME` = ? 
+2019-12-15 12:00:36.697 DEBUG 35614 --- [http-nio-8080-exec-7] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: ["tfountain"]
+2019-12-15 12:00:44.529 DEBUG 35614 --- [http-nio-8080-exec-9] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE 1 = 1  and `NAME` = ? 
+2019-12-15 12:00:44.529 DEBUG 35614 --- [http-nio-8080-exec-9] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: ["tfountain"]
+2019-12-15 12:07:21.499  INFO 35819 --- [restartedMain] com.yygq.demo.DemoApplication            : Starting DemoApplication on AmeReIorideMacBook-Pro.local with PID 35819 (/Users/ame/Desktop/springstu/demo/target/classes started by ame in /Users/ame/Desktop/springstu/demo)
+2019-12-15 12:07:21.501 DEBUG 35819 --- [restartedMain] com.yygq.demo.DemoApplication            : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2019-12-15 12:07:21.502  INFO 35819 --- [restartedMain] com.yygq.demo.DemoApplication            : The following profiles are active: dev
+2019-12-15 12:07:21.544  INFO 35819 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-15 12:07:21.544  INFO 35819 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-15 12:07:22.576  INFO 35819 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-15 12:07:22.587  INFO 35819 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-15 12:07:22.588  INFO 35819 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-15 12:07:22.680  INFO 35819 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-15 12:07:22.681  INFO 35819 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1137 ms
+2019-12-15 12:07:22.734  WARN 35819 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'administerController' defined in file [/Users/ame/Desktop/springstu/demo/target/classes/com/yygq/demo/controller/AdministerController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.yygq.demo.service.AdministerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2019-12-15 12:07:22.736  INFO 35819 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-12-15 12:07:22.762  INFO 35819 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-15 12:07:22.883 ERROR 35819 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.yygq.demo.controller.AdministerController required a bean of type 'com.yygq.demo.service.AdministerService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.yygq.demo.service.AdministerService' in your configuration.
+
+2019-12-15 12:22:51.035  INFO 35898 --- [restartedMain] com.yygq.demo.DemoApplication            : Starting DemoApplication on AmeReIorideMacBook-Pro.local with PID 35898 (/Users/ame/Desktop/springstu/demo/target/classes started by ame in /Users/ame/Desktop/springstu/demo)
+2019-12-15 12:22:51.037 DEBUG 35898 --- [restartedMain] com.yygq.demo.DemoApplication            : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2019-12-15 12:22:51.037  INFO 35898 --- [restartedMain] com.yygq.demo.DemoApplication            : The following profiles are active: dev
+2019-12-15 12:22:51.077  INFO 35898 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-15 12:22:51.077  INFO 35898 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-15 12:22:52.073  INFO 35898 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-15 12:22:52.084  INFO 35898 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-15 12:22:52.085  INFO 35898 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-15 12:22:52.153  INFO 35898 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-15 12:22:52.153  INFO 35898 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1076 ms
+2019-12-15 12:22:52.197  WARN 35898 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'administerController' defined in file [/Users/ame/Desktop/springstu/demo/target/classes/com/yygq/demo/controller/AdministerController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.yygq.demo.service.AdministerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2019-12-15 12:22:52.199  INFO 35898 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-12-15 12:22:52.223  INFO 35898 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-15 12:22:52.359 ERROR 35898 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.yygq.demo.controller.AdministerController required a bean of type 'com.yygq.demo.service.AdministerService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.yygq.demo.service.AdministerService' in your configuration.
+
+2019-12-15 12:32:27.243  INFO 35909 --- [restartedMain] com.yygq.demo.DemoApplication            : Starting DemoApplication on AmeReIorideMacBook-Pro.local with PID 35909 (/Users/ame/Desktop/springstu/demo/target/classes started by ame in /Users/ame/Desktop/springstu/demo)
+2019-12-15 12:32:27.246 DEBUG 35909 --- [restartedMain] com.yygq.demo.DemoApplication            : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2019-12-15 12:32:27.246  INFO 35909 --- [restartedMain] com.yygq.demo.DemoApplication            : The following profiles are active: dev
+2019-12-15 12:32:27.296  INFO 35909 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-15 12:32:27.297  INFO 35909 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-15 12:32:28.324  INFO 35909 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-15 12:32:28.334  INFO 35909 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-15 12:32:28.335  INFO 35909 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-15 12:32:28.398  INFO 35909 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-15 12:32:28.398  INFO 35909 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1101 ms
+2019-12-15 12:32:28.442  WARN 35909 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'administerController' defined in file [/Users/ame/Desktop/springstu/demo/target/classes/com/yygq/demo/controller/AdministerController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.yygq.demo.service.AdministerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2019-12-15 12:32:28.444  INFO 35909 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-12-15 12:32:28.460  INFO 35909 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-15 12:32:28.571 ERROR 35909 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.yygq.demo.controller.AdministerController required a bean of type 'com.yygq.demo.service.AdministerService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.yygq.demo.service.AdministerService' in your configuration.
+
+2019-12-15 12:33:27.084  INFO 35912 --- [restartedMain] com.yygq.demo.DemoApplication            : Starting DemoApplication on AmeReIorideMacBook-Pro.local with PID 35912 (/Users/ame/Desktop/springstu/demo/target/classes started by ame in /Users/ame/Desktop/springstu/demo)
+2019-12-15 12:33:27.086 DEBUG 35912 --- [restartedMain] com.yygq.demo.DemoApplication            : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2019-12-15 12:33:27.086  INFO 35912 --- [restartedMain] com.yygq.demo.DemoApplication            : The following profiles are active: dev
+2019-12-15 12:33:27.125  INFO 35912 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-15 12:33:27.125  INFO 35912 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-15 12:33:28.143  INFO 35912 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-15 12:33:28.154  INFO 35912 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-15 12:33:28.155  INFO 35912 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-15 12:33:28.223  INFO 35912 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-15 12:33:28.223  INFO 35912 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1098 ms
+2019-12-15 12:33:28.271  WARN 35912 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'administerController' defined in file [/Users/ame/Desktop/springstu/demo/target/classes/com/yygq/demo/controller/AdministerController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.yygq.demo.service.AdministerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2019-12-15 12:33:28.274  INFO 35912 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-12-15 12:33:28.294  INFO 35912 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-15 12:33:28.418 ERROR 35912 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.yygq.demo.controller.AdministerController required a bean of type 'com.yygq.demo.service.AdministerService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.yygq.demo.service.AdministerService' in your configuration.
+
+2019-12-15 12:35:02.563  INFO 36052 --- [restartedMain] com.yygq.demo.DemoApplication            : Starting DemoApplication on AmeReIorideMacBook-Pro.local with PID 36052 (/Users/ame/Desktop/springstu/demo/target/classes started by ame in /Users/ame/Desktop/springstu/demo)
+2019-12-15 12:35:02.566 DEBUG 36052 --- [restartedMain] com.yygq.demo.DemoApplication            : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2019-12-15 12:35:02.567  INFO 36052 --- [restartedMain] com.yygq.demo.DemoApplication            : The following profiles are active: dev
+2019-12-15 12:35:02.618  INFO 36052 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-15 12:35:02.619  INFO 36052 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-15 12:35:03.620  INFO 36052 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-15 12:35:03.630  INFO 36052 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-15 12:35:03.630  INFO 36052 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-15 12:35:03.694  INFO 36052 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-15 12:35:03.694  INFO 36052 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1075 ms
+2019-12-15 12:35:03.743  WARN 36052 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'administerController' defined in file [/Users/ame/Desktop/springstu/demo/target/classes/com/yygq/demo/controller/AdministerController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.yygq.demo.service.AdministerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2019-12-15 12:35:03.745  INFO 36052 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-12-15 12:35:03.761  INFO 36052 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-15 12:35:03.856 ERROR 36052 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.yygq.demo.controller.AdministerController required a bean of type 'com.yygq.demo.service.AdministerService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.yygq.demo.service.AdministerService' in your configuration.
+
+2019-12-15 12:39:55.022  INFO 36161 --- [restartedMain] com.yygq.demo.DemoApplication            : Starting DemoApplication on AmeReIorideMacBook-Pro.local with PID 36161 (/Users/ame/Desktop/springstu/demo/target/classes started by ame in /Users/ame/Desktop/springstu/demo)
+2019-12-15 12:39:55.024 DEBUG 36161 --- [restartedMain] com.yygq.demo.DemoApplication            : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2019-12-15 12:39:55.024  INFO 36161 --- [restartedMain] com.yygq.demo.DemoApplication            : The following profiles are active: dev
+2019-12-15 12:39:55.067  INFO 36161 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-15 12:39:55.067  INFO 36161 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-15 12:39:56.176  INFO 36161 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-15 12:39:56.187  INFO 36161 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-15 12:39:56.187  INFO 36161 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-15 12:39:56.269  INFO 36161 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-15 12:39:56.270  INFO 36161 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1202 ms
+2019-12-15 12:39:56.317  WARN 36161 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'administerController' defined in file [/Users/ame/Desktop/springstu/demo/target/classes/com/yygq/demo/controller/AdministerController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.yygq.demo.service.AdministerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2019-12-15 12:39:56.319  INFO 36161 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-12-15 12:39:56.340  INFO 36161 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-15 12:39:56.433 ERROR 36161 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.yygq.demo.controller.AdministerController required a bean of type 'com.yygq.demo.service.AdministerService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.yygq.demo.service.AdministerService' in your configuration.
+
+2019-12-15 12:44:56.721  INFO 36217 --- [restartedMain] com.yygq.demo.DemoApplication            : Starting DemoApplication on AmeReIorideMacBook-Pro.local with PID 36217 (/Users/ame/Desktop/springstu/demo/target/classes started by ame in /Users/ame/Desktop/springstu/demo)
+2019-12-15 12:44:56.724 DEBUG 36217 --- [restartedMain] com.yygq.demo.DemoApplication            : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2019-12-15 12:44:56.724  INFO 36217 --- [restartedMain] com.yygq.demo.DemoApplication            : The following profiles are active: dev
+2019-12-15 12:44:56.763  INFO 36217 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-15 12:44:56.764  INFO 36217 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-15 12:44:57.862  INFO 36217 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-15 12:44:57.873  INFO 36217 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-15 12:44:57.873  INFO 36217 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-15 12:44:57.941  INFO 36217 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-15 12:44:57.941  INFO 36217 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1177 ms
+2019-12-15 12:44:57.995  WARN 36217 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'administerController' defined in file [/Users/ame/Desktop/springstu/demo/target/classes/com/yygq/demo/controller/AdministerController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.yygq.demo.service.AdministerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2019-12-15 12:44:58.000  INFO 36217 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-12-15 12:44:58.027  INFO 36217 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-15 12:44:58.119 ERROR 36217 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.yygq.demo.controller.AdministerController required a bean of type 'com.yygq.demo.service.AdministerService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.yygq.demo.service.AdministerService' in your configuration.
+
+2019-12-15 12:47:16.239  INFO 36224 --- [restartedMain] com.yygq.demo.DemoApplication            : Starting DemoApplication on AmeReIorideMacBook-Pro.local with PID 36224 (/Users/ame/Desktop/springstu/demo/target/classes started by ame in /Users/ame/Desktop/springstu/demo)
+2019-12-15 12:47:16.241 DEBUG 36224 --- [restartedMain] com.yygq.demo.DemoApplication            : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2019-12-15 12:47:16.241  INFO 36224 --- [restartedMain] com.yygq.demo.DemoApplication            : The following profiles are active: dev
+2019-12-15 12:47:16.283  INFO 36224 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-15 12:47:16.283  INFO 36224 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-15 12:47:17.274  INFO 36224 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-15 12:47:17.284  INFO 36224 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-15 12:47:17.285  INFO 36224 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-15 12:47:17.344  INFO 36224 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-15 12:47:17.344  INFO 36224 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1060 ms
+2019-12-15 12:47:17.389  WARN 36224 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'administerController' defined in file [/Users/ame/Desktop/springstu/demo/target/classes/com/yygq/demo/controller/AdministerController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.yygq.demo.service.AdministerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2019-12-15 12:47:17.391  INFO 36224 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-12-15 12:47:17.410  INFO 36224 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-15 12:47:17.515 ERROR 36224 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.yygq.demo.controller.AdministerController required a bean of type 'com.yygq.demo.service.AdministerService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.yygq.demo.service.AdministerService' in your configuration.
+
+2019-12-15 12:51:13.019  INFO 36234 --- [restartedMain] com.yygq.demo.DemoApplication            : Starting DemoApplication on AmeReIorideMacBook-Pro.local with PID 36234 (/Users/ame/Desktop/springstu/demo/target/classes started by ame in /Users/ame/Desktop/springstu/demo)
+2019-12-15 12:51:13.022 DEBUG 36234 --- [restartedMain] com.yygq.demo.DemoApplication            : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2019-12-15 12:51:13.022  INFO 36234 --- [restartedMain] com.yygq.demo.DemoApplication            : The following profiles are active: dev
+2019-12-15 12:51:13.069  INFO 36234 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-15 12:51:13.069  INFO 36234 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-15 12:51:14.194  INFO 36234 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-15 12:51:14.203  INFO 36234 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-15 12:51:14.204  INFO 36234 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-15 12:51:14.280  INFO 36234 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-15 12:51:14.281  INFO 36234 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1212 ms
+2019-12-15 12:51:14.330  WARN 36234 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'administerController' defined in file [/Users/ame/Desktop/springstu/demo/target/classes/com/yygq/demo/controller/AdministerController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.yygq.demo.service.AdministerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2019-12-15 12:51:14.335  INFO 36234 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-12-15 12:51:14.356  INFO 36234 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-15 12:51:14.454 ERROR 36234 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.yygq.demo.controller.AdministerController required a bean of type 'com.yygq.demo.service.AdministerService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.yygq.demo.service.AdministerService' in your configuration.
+
+2019-12-15 12:53:03.826  INFO 36237 --- [restartedMain] com.yygq.demo.DemoApplication            : Starting DemoApplication on AmeReIorideMacBook-Pro.local with PID 36237 (/Users/ame/Desktop/springstu/demo/target/classes started by ame in /Users/ame/Desktop/springstu/demo)
+2019-12-15 12:53:03.828 DEBUG 36237 --- [restartedMain] com.yygq.demo.DemoApplication            : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2019-12-15 12:53:03.828  INFO 36237 --- [restartedMain] com.yygq.demo.DemoApplication            : The following profiles are active: dev
+2019-12-15 12:53:03.876  INFO 36237 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-15 12:53:03.876  INFO 36237 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-15 12:53:04.950  INFO 36237 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-15 12:53:04.963  INFO 36237 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-15 12:53:04.963  INFO 36237 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-15 12:53:05.028  INFO 36237 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-15 12:53:05.028  INFO 36237 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1152 ms
+2019-12-15 12:53:05.091  WARN 36237 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'administerController' defined in file [/Users/ame/Desktop/springstu/demo/target/classes/com/yygq/demo/controller/AdministerController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.yygq.demo.service.AdministerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2019-12-15 12:53:05.094  INFO 36237 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-12-15 12:53:05.114  INFO 36237 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-15 12:53:05.209 ERROR 36237 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.yygq.demo.controller.AdministerController required a bean of type 'com.yygq.demo.service.AdministerService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.yygq.demo.service.AdministerService' in your configuration.
+
+2019-12-15 12:55:16.602  INFO 36252 --- [restartedMain] com.yygq.demo.DemoApplication            : Starting DemoApplication on AmeReIorideMacBook-Pro.local with PID 36252 (/Users/ame/Desktop/springstu/demo/target/classes started by ame in /Users/ame/Desktop/springstu/demo)
+2019-12-15 12:55:16.605 DEBUG 36252 --- [restartedMain] com.yygq.demo.DemoApplication            : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2019-12-15 12:55:16.605  INFO 36252 --- [restartedMain] com.yygq.demo.DemoApplication            : The following profiles are active: dev
+2019-12-15 12:55:16.655  INFO 36252 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-15 12:55:16.656  INFO 36252 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-15 12:55:17.694  INFO 36252 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-15 12:55:17.705  INFO 36252 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-15 12:55:17.706  INFO 36252 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-15 12:55:17.782  INFO 36252 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-15 12:55:17.783  INFO 36252 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1127 ms
+2019-12-15 12:55:17.829  WARN 36252 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'administerController' defined in file [/Users/ame/Desktop/springstu/demo/target/classes/com/yygq/demo/controller/AdministerController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.yygq.demo.service.AdministerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2019-12-15 12:55:17.836  INFO 36252 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-12-15 12:55:17.854  INFO 36252 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-15 12:55:17.947 ERROR 36252 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.yygq.demo.controller.AdministerController required a bean of type 'com.yygq.demo.service.AdministerService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.yygq.demo.service.AdministerService' in your configuration.
+
+2019-12-15 12:58:38.505  INFO 36265 --- [restartedMain] com.yygq.demo.DemoApplication            : Starting DemoApplication on AmeReIorideMacBook-Pro.local with PID 36265 (/Users/ame/Desktop/springstu/demo/target/classes started by ame in /Users/ame/Desktop/springstu/demo)
+2019-12-15 12:58:38.507 DEBUG 36265 --- [restartedMain] com.yygq.demo.DemoApplication            : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2019-12-15 12:58:38.507  INFO 36265 --- [restartedMain] com.yygq.demo.DemoApplication            : The following profiles are active: dev
+2019-12-15 12:58:38.552  INFO 36265 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-15 12:58:38.553  INFO 36265 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-15 12:58:39.584  INFO 36265 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-15 12:58:39.594  INFO 36265 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-15 12:58:39.595  INFO 36265 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-15 12:58:39.660  INFO 36265 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-15 12:58:39.660  INFO 36265 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1107 ms
+2019-12-15 12:58:39.709  WARN 36265 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'administerController' defined in file [/Users/ame/Desktop/springstu/demo/target/classes/com/yygq/demo/controller/AdministerController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.yygq.demo.service.AdministerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2019-12-15 12:58:39.711  INFO 36265 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-12-15 12:58:39.734  INFO 36265 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-15 12:58:39.836 ERROR 36265 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.yygq.demo.controller.AdministerController required a bean of type 'com.yygq.demo.service.AdministerService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.yygq.demo.service.AdministerService' in your configuration.
+
+2019-12-15 13:04:55.590  INFO 36342 --- [restartedMain] com.yygq.demo.DemoApplication            : Starting DemoApplication on AmeReIorideMacBook-Pro.local with PID 36342 (/Users/ame/Desktop/springstu/demo/target/classes started by ame in /Users/ame/Desktop/springstu/demo)
+2019-12-15 13:04:55.592 DEBUG 36342 --- [restartedMain] com.yygq.demo.DemoApplication            : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2019-12-15 13:04:55.593  INFO 36342 --- [restartedMain] com.yygq.demo.DemoApplication            : The following profiles are active: dev
+2019-12-15 13:04:55.636  INFO 36342 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-15 13:04:55.636  INFO 36342 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-15 13:04:56.743  INFO 36342 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-15 13:04:56.754  INFO 36342 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-15 13:04:56.754  INFO 36342 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-15 13:04:56.829  INFO 36342 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-15 13:04:56.830  INFO 36342 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1194 ms
+2019-12-15 13:04:56.904  WARN 36342 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'administerController' defined in file [/Users/ame/Desktop/springstu/demo/target/classes/com/yygq/demo/controller/AdministerController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.yygq.demo.service.AdministerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2019-12-15 13:04:56.907  INFO 36342 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-12-15 13:04:56.924  INFO 36342 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-15 13:04:57.021 ERROR 36342 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.yygq.demo.controller.AdministerController required a bean of type 'com.yygq.demo.service.AdministerService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.yygq.demo.service.AdministerService' in your configuration.
+
+2019-12-15 13:17:42.032  INFO 36373 --- [restartedMain] com.yygq.demo.DemoApplication            : Starting DemoApplication on AmeReIorideMacBook-Pro.local with PID 36373 (/Users/ame/Desktop/springstu/demo/target/classes started by ame in /Users/ame/Desktop/springstu/demo)
+2019-12-15 13:17:42.034 DEBUG 36373 --- [restartedMain] com.yygq.demo.DemoApplication            : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2019-12-15 13:17:42.035  INFO 36373 --- [restartedMain] com.yygq.demo.DemoApplication            : The following profiles are active: dev
+2019-12-15 13:17:42.077  INFO 36373 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-15 13:17:42.077  INFO 36373 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-15 13:17:43.054  INFO 36373 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-15 13:17:43.063  INFO 36373 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-15 13:17:43.063  INFO 36373 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-15 13:17:43.124  INFO 36373 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-15 13:17:43.124  INFO 36373 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1047 ms
+2019-12-15 13:17:43.161  WARN 36373 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'administerController' defined in file [/Users/ame/Desktop/springstu/demo/target/classes/com/yygq/demo/controller/AdministerController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.yygq.demo.service.AdministerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2019-12-15 13:17:43.163  INFO 36373 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-12-15 13:17:43.178  INFO 36373 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-15 13:17:43.263 ERROR 36373 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.yygq.demo.controller.AdministerController required a bean of type 'com.yygq.demo.service.AdministerService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.yygq.demo.service.AdministerService' in your configuration.
+
+2019-12-15 13:20:52.276  INFO 36381 --- [restartedMain] com.yygq.demo.DemoApplication            : Starting DemoApplication on AmeReIorideMacBook-Pro.local with PID 36381 (/Users/ame/Desktop/springstu/demo/target/classes started by ame in /Users/ame/Desktop/springstu/demo)
+2019-12-15 13:20:52.278 DEBUG 36381 --- [restartedMain] com.yygq.demo.DemoApplication            : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2019-12-15 13:20:52.279  INFO 36381 --- [restartedMain] com.yygq.demo.DemoApplication            : The following profiles are active: dev
+2019-12-15 13:20:52.320  INFO 36381 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-15 13:20:52.320  INFO 36381 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-15 13:20:53.364  INFO 36381 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-15 13:20:53.378  INFO 36381 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-15 13:20:53.379  INFO 36381 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-15 13:20:53.450  INFO 36381 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-15 13:20:53.450  INFO 36381 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1130 ms
+2019-12-15 13:20:53.551  INFO 36381 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : SpringBootDemoHikariCP - Starting...
+2019-12-15 13:20:53.807  INFO 36381 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : SpringBootDemoHikariCP - Start completed.
+2019-12-15 13:20:53.992  INFO 36381 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-15 13:20:54.184  INFO 36381 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-15 13:20:54.251  INFO 36381 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
+2019-12-15 13:20:54.391  INFO 36381 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-15 13:20:54.394  INFO 36381 --- [restartedMain] com.yygq.demo.DemoApplication            : Started DemoApplication in 2.626 seconds (JVM running for 3.034)

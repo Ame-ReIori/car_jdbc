@@ -1,6 +1,7 @@
 package com.yygq.demo.service;
 
 import com.yygq.demo.entity.Insurance;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -8,6 +9,7 @@ import java.util.List;
  * insurance service
  * @author ame
  */
+@Service
 public interface InsuranceService {
 
     /**

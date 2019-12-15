@@ -1,6 +1,7 @@
 package com.yygq.demo.service;
 
 import com.yygq.demo.entity.OperationRecord;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -8,6 +9,7 @@ import java.util.List;
  * operation record service
  * @author ame
  */
+@Service
 public interface OperationRecordService {
 
     /**

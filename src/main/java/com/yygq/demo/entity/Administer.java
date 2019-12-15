@@ -13,14 +13,14 @@ import java.util.Date;
  * @author ame
  */
 @Data
-@Table(name = "ADMIN_TABLE")
+@Table(name = "ADMINISTER_TABLE")
 public class Administer {
     /**
      * id
      */
-    @Pk(name = "ADMIN_ID")
-    @Column(name = "ADMIN_ID")
-    private Long adminId;
+    @Pk(name = "ADMINISTER_ID")
+    @Column(name = "ADMINISTER_ID")
+    private Long administerId;
 
     /**
      * admin's name
