@@ -13889,3 +13889,373 @@ java.sql.SQLSyntaxErrorException: Unknown column 'STATUS' in 'field list'
 2019-12-15 16:50:15.382 DEBUG 4780 --- [http-nio-8080-exec-7] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [9]
 2019-12-15 16:50:19.872 DEBUG 4780 --- [http-nio-8080-exec-8] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_DETECTION_TABLE` WHERE 1 = 1
 2019-12-15 16:50:28.250 DEBUG 4780 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:17:19.307  INFO 8464 --- [restartedMain] com.yygq.demo.DemoApplication            : Starting DemoApplication on V7VIH0TM0TXE6RA with PID 8464 (C:\Users\Administrator\Desktop\demo\demo\target\classes started by Administrator in C:\Users\Administrator\Desktop\demo\demo)
+2019-12-15 21:17:19.338 DEBUG 8464 --- [restartedMain] com.yygq.demo.DemoApplication            : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2019-12-15 21:17:19.338  INFO 8464 --- [restartedMain] com.yygq.demo.DemoApplication            : The following profiles are active: dev
+2019-12-15 21:17:19.510  INFO 8464 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-15 21:17:19.510  INFO 8464 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-15 21:17:22.619  INFO 8464 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-15 21:17:22.634  INFO 8464 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-15 21:17:22.634  INFO 8464 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-15 21:17:22.806  INFO 8464 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-15 21:17:22.806  INFO 8464 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3296 ms
+2019-12-15 21:17:22.931  INFO 8464 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : SpringBootDemoHikariCP - Starting...
+2019-12-15 21:17:23.197  INFO 8464 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : SpringBootDemoHikariCP - Start completed.
+2019-12-15 21:17:28.430  INFO 8464 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-15 21:17:31.273  INFO 8464 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-15 21:17:31.367  INFO 8464 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
+2019-12-15 21:17:31.757  INFO 8464 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-15 21:17:31.757  INFO 8464 --- [restartedMain] com.yygq.demo.DemoApplication            : Started DemoApplication in 13.067 seconds (JVM running for 14.049)
+2019-12-15 21:17:38.136  INFO 8464 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-15 21:17:38.136  INFO 8464 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-15 21:17:38.144  INFO 8464 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2019-12-15 21:17:39.920 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:17:39.977 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:17:39.991 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 21:17:40.013 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:17:40.014 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 21:17:40.015 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:17:40.021 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:17:40.021 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 21:17:40.025 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:17:40.025 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 21:17:40.028 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:17:40.040 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:17:40.042 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [3]
+2019-12-15 21:17:40.045 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:17:40.046 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [3]
+2019-12-15 21:17:40.047 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:17:40.050 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:17:40.050 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [4]
+2019-12-15 21:17:40.051 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:17:40.051 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [4]
+2019-12-15 21:17:40.053 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:17:40.055 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:17:40.055 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [5]
+2019-12-15 21:17:40.056 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:17:40.056 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [5]
+2019-12-15 21:17:40.058 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:17:40.060 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:17:40.060 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [6]
+2019-12-15 21:17:40.062 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:17:40.062 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [6]
+2019-12-15 21:17:40.066 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:17:40.067 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:17:40.067 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [7]
+2019-12-15 21:17:40.069 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:17:40.069 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [7]
+2019-12-15 21:17:40.070 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:17:40.072 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:17:40.072 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [8]
+2019-12-15 21:17:40.074 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:17:40.074 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [8]
+2019-12-15 21:17:40.078 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:17:40.080 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:17:40.080 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [9]
+2019-12-15 21:17:40.081 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:17:40.082 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [9]
+2019-12-15 21:17:40.083 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:17:40.085 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:17:40.085 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [10]
+2019-12-15 21:17:40.087 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:17:40.087 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [10]
+2019-12-15 21:17:40.088 DEBUG 8464 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:19:33.969  INFO 444 --- [restartedMain] com.yygq.demo.DemoApplication            : Starting DemoApplication on V7VIH0TM0TXE6RA with PID 444 (C:\Users\Administrator\Desktop\demo\demo\target\classes started by Administrator in C:\Users\Administrator\Desktop\demo\demo)
+2019-12-15 21:19:33.969 DEBUG 444 --- [restartedMain] com.yygq.demo.DemoApplication            : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2019-12-15 21:19:33.969  INFO 444 --- [restartedMain] com.yygq.demo.DemoApplication            : The following profiles are active: dev
+2019-12-15 21:19:34.032  INFO 444 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-15 21:19:34.032  INFO 444 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-15 21:19:37.031  INFO 444 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-15 21:19:37.046  INFO 444 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-15 21:19:37.047  INFO 444 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-15 21:19:37.183  INFO 444 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-15 21:19:37.183  INFO 444 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3151 ms
+2019-12-15 21:19:37.312  INFO 444 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : SpringBootDemoHikariCP - Starting...
+2019-12-15 21:19:37.565  INFO 444 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : SpringBootDemoHikariCP - Start completed.
+2019-12-15 21:19:42.981  INFO 444 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-15 21:19:46.554  INFO 444 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-15 21:19:46.938  INFO 444 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
+2019-12-15 21:19:47.820  INFO 444 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-15 21:19:47.829  INFO 444 --- [restartedMain] com.yygq.demo.DemoApplication            : Started DemoApplication in 14.392 seconds (JVM running for 15.077)
+2019-12-15 21:19:49.801  INFO 444 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-15 21:19:49.804  INFO 444 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-15 21:19:49.833  INFO 444 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 29 ms
+2019-12-15 21:19:50.836 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:19:50.923 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:19:50.935 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 21:19:50.960 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:19:50.964 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 21:19:50.968 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:19:50.992 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:19:50.992 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 21:19:51.000 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:19:51.000 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 21:19:51.002 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:19:51.009 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:19:51.012 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [3]
+2019-12-15 21:19:51.014 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:19:51.015 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [3]
+2019-12-15 21:19:51.016 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:19:51.018 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:19:51.018 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [4]
+2019-12-15 21:19:51.020 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:19:51.020 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [4]
+2019-12-15 21:19:51.021 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:19:51.023 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:19:51.023 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [5]
+2019-12-15 21:19:51.025 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:19:51.025 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [5]
+2019-12-15 21:19:51.029 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:19:51.038 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:19:51.038 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [6]
+2019-12-15 21:19:51.045 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:19:51.045 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [6]
+2019-12-15 21:19:51.051 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:19:51.055 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:19:51.055 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [7]
+2019-12-15 21:19:51.057 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:19:51.057 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [7]
+2019-12-15 21:19:51.062 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:19:51.066 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:19:51.066 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [8]
+2019-12-15 21:19:51.069 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:19:51.069 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [8]
+2019-12-15 21:19:51.074 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:19:51.076 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:19:51.077 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [9]
+2019-12-15 21:19:51.078 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:19:51.079 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [9]
+2019-12-15 21:19:51.081 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:19:51.084 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:19:51.084 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [10]
+2019-12-15 21:19:51.085 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:19:51.085 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [10]
+2019-12-15 21:19:51.087 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:20:05.939 DEBUG 444 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:20:05.942 DEBUG 444 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:20:05.942 DEBUG 444 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 21:20:05.944 DEBUG 444 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:20:05.944 DEBUG 444 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [5]
+2019-12-15 21:20:05.945 DEBUG 444 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:20:05.947 DEBUG 444 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:20:05.947 DEBUG 444 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 21:20:05.950 DEBUG 444 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:20:05.951 DEBUG 444 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [6]
+2019-12-15 21:20:05.952 DEBUG 444 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:20:05.954 DEBUG 444 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:20:05.954 DEBUG 444 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [3]
+2019-12-15 21:20:05.955 DEBUG 444 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:20:05.955 DEBUG 444 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [7]
+2019-12-15 21:20:05.956 DEBUG 444 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:20:05.959 DEBUG 444 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:20:05.959 DEBUG 444 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [4]
+2019-12-15 21:20:05.961 DEBUG 444 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:20:05.961 DEBUG 444 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [8]
+2019-12-15 21:20:05.963 DEBUG 444 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:20:05.968 DEBUG 444 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:20:05.968 DEBUG 444 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [5]
+2019-12-15 21:20:05.970 DEBUG 444 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:20:05.971 DEBUG 444 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [9]
+2019-12-15 21:20:05.971 DEBUG 444 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:20:05.971 DEBUG 444 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:20:05.971 DEBUG 444 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [6]
+2019-12-15 21:20:05.971 DEBUG 444 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:20:05.971 DEBUG 444 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [10]
+2019-12-15 21:20:05.971 DEBUG 444 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:20:06.780 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:20:06.783 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:20:06.783 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 21:20:06.785 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:20:06.785 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [9]
+2019-12-15 21:20:06.786 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:20:06.787 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:20:06.787 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 21:20:06.789 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:20:06.789 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [10]
+2019-12-15 21:20:06.790 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:21:05.311 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE USER_ID = ?
+2019-12-15 21:21:05.308 DEBUG 444 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE USER_ID = ?
+2019-12-15 21:21:05.314 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [9]
+2019-12-15 21:21:05.314 DEBUG 444 --- [http-nio-8080-exec-1] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [9]
+2019-12-15 21:21:07.891 DEBUG 444 --- [http-nio-8080-exec-3] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE USER_ID = ?
+2019-12-15 21:21:07.892 DEBUG 444 --- [http-nio-8080-exec-3] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [9]
+2019-12-15 21:21:07.898 DEBUG 444 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE USER_ID = ?
+2019-12-15 21:21:07.903 DEBUG 444 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [9]
+2019-12-15 21:21:09.727 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE USER_ID = ?
+2019-12-15 21:21:09.728 DEBUG 444 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [9]
+2019-12-15 21:21:09.742 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `ORDER_TABLE` WHERE 1 = 1  and `CUSTOMER_ID` = ? 
+2019-12-15 21:21:09.747 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [9]
+2019-12-15 21:21:11.162 DEBUG 444 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE USER_ID = ?
+2019-12-15 21:21:11.163 DEBUG 444 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [9]
+2019-12-15 21:21:11.165 DEBUG 444 --- [http-nio-8080-exec-9] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1  and `OWNER_ID` = ? 
+2019-12-15 21:21:11.166 DEBUG 444 --- [http-nio-8080-exec-9] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [9]
+2019-12-15 21:22:39.435 DEBUG 444 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE USER_ID = ?
+2019-12-15 21:22:39.435 DEBUG 444 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [9]
+2019-12-15 21:22:39.438 DEBUG 444 --- [http-nio-8080-exec-3] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `ORDER_TABLE` WHERE 1 = 1  and `CUSTOMER_ID` = ? 
+2019-12-15 21:22:39.439 DEBUG 444 --- [http-nio-8080-exec-3] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [9]
+2019-12-15 21:22:41.439 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE USER_ID = ?
+2019-12-15 21:22:41.439 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [9]
+2019-12-15 21:22:41.440 DEBUG 444 --- [http-nio-8080-exec-7] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE USER_ID = ?
+2019-12-15 21:22:41.440 DEBUG 444 --- [http-nio-8080-exec-7] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [9]
+2019-12-15 21:22:43.653 DEBUG 444 --- [http-nio-8080-exec-3] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE USER_ID = ?
+2019-12-15 21:22:43.652 DEBUG 444 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE USER_ID = ?
+2019-12-15 21:22:43.655 DEBUG 444 --- [http-nio-8080-exec-3] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [9]
+2019-12-15 21:22:43.657 DEBUG 444 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [9]
+2019-12-15 21:22:49.836 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:22:49.838 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:22:49.838 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 21:22:49.840 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:22:49.840 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 21:22:49.842 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:22:49.843 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:22:49.844 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 21:22:49.845 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:22:49.845 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 21:22:49.846 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:22:49.848 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:22:49.848 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [3]
+2019-12-15 21:22:49.849 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:22:49.849 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [3]
+2019-12-15 21:22:49.850 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:22:49.852 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:22:49.852 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [4]
+2019-12-15 21:22:49.853 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:22:49.854 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [4]
+2019-12-15 21:22:49.855 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:22:49.856 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:22:49.856 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [5]
+2019-12-15 21:22:49.857 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:22:49.857 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [5]
+2019-12-15 21:22:49.858 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:22:49.859 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:22:49.860 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [6]
+2019-12-15 21:22:49.861 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:22:49.861 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [6]
+2019-12-15 21:22:49.862 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:22:49.863 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:22:49.863 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [7]
+2019-12-15 21:22:49.864 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:22:49.865 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [7]
+2019-12-15 21:22:49.866 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:22:49.868 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:22:49.868 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [8]
+2019-12-15 21:22:49.869 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:22:49.869 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [8]
+2019-12-15 21:22:49.870 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:22:49.872 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:22:49.872 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [9]
+2019-12-15 21:22:49.873 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:22:49.873 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [9]
+2019-12-15 21:22:49.874 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:22:49.875 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:22:49.876 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [10]
+2019-12-15 21:22:49.877 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:22:49.877 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [10]
+2019-12-15 21:22:49.878 DEBUG 444 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:25:25.976  INFO 14396 --- [restartedMain] com.yygq.demo.DemoApplication            : Starting DemoApplication on V7VIH0TM0TXE6RA with PID 14396 (C:\Users\Administrator\Desktop\demo\demo\target\classes started by Administrator in C:\Users\Administrator\Desktop\demo\demo)
+2019-12-15 21:25:25.992 DEBUG 14396 --- [restartedMain] com.yygq.demo.DemoApplication            : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2019-12-15 21:25:25.992  INFO 14396 --- [restartedMain] com.yygq.demo.DemoApplication            : The following profiles are active: dev
+2019-12-15 21:25:26.054  INFO 14396 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-15 21:25:26.054  INFO 14396 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-15 21:25:28.601  INFO 14396 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-15 21:25:28.616  INFO 14396 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-15 21:25:28.616  INFO 14396 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-15 21:25:28.757  INFO 14396 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-15 21:25:28.757  INFO 14396 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2703 ms
+2019-12-15 21:25:28.944  INFO 14396 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : SpringBootDemoHikariCP - Starting...
+2019-12-15 21:25:29.194  INFO 14396 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : SpringBootDemoHikariCP - Start completed.
+2019-12-15 21:25:34.256  INFO 14396 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-15 21:25:36.927  INFO 14396 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-15 21:25:37.005  INFO 14396 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [templates/index.html]
+2019-12-15 21:25:37.349  INFO 14396 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-15 21:25:37.349  INFO 14396 --- [restartedMain] com.yygq.demo.DemoApplication            : Started DemoApplication in 11.887 seconds (JVM running for 12.547)
+2019-12-15 21:25:53.277  INFO 14396 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-15 21:25:53.278  INFO 14396 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-15 21:25:53.288  INFO 14396 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2019-12-15 21:25:54.146 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:25:54.193 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:25:54.217 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 21:25:54.238 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:25:54.239 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [1]
+2019-12-15 21:25:54.241 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:25:54.247 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:25:54.247 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 21:25:54.249 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:25:54.249 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [2]
+2019-12-15 21:25:54.251 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:25:54.253 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:25:54.253 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [3]
+2019-12-15 21:25:54.255 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:25:54.255 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [3]
+2019-12-15 21:25:54.256 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:25:54.258 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:25:54.258 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [4]
+2019-12-15 21:25:54.260 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:25:54.260 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [4]
+2019-12-15 21:25:54.261 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:25:54.264 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:25:54.264 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [5]
+2019-12-15 21:25:54.265 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:25:54.266 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [5]
+2019-12-15 21:25:54.267 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:25:54.269 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:25:54.269 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [6]
+2019-12-15 21:25:54.271 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:25:54.271 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [6]
+2019-12-15 21:25:54.272 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:25:54.274 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:25:54.274 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [7]
+2019-12-15 21:25:54.275 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:25:54.275 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [7]
+2019-12-15 21:25:54.276 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:25:54.278 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:25:54.278 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [8]
+2019-12-15 21:25:54.280 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:25:54.280 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [8]
+2019-12-15 21:25:54.283 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:25:54.285 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:25:54.285 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [9]
+2019-12-15 21:25:54.287 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:25:54.287 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [9]
+2019-12-15 21:25:54.288 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:25:54.290 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:25:54.290 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [10]
+2019-12-15 21:25:54.291 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE CAR_ID = ?
+2019-12-15 21:25:54.291 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [10]
+2019-12-15 21:25:54.293 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1
+2019-12-15 21:26:10.586 DEBUG 14396 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE USER_ID = ?
+2019-12-15 21:26:10.594 DEBUG 14396 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [9]
+2019-12-15 21:26:10.578 DEBUG 14396 --- [http-nio-8080-exec-3] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE USER_ID = ?
+2019-12-15 21:26:10.595 DEBUG 14396 --- [http-nio-8080-exec-3] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [9]
+2019-12-15 21:26:12.917 DEBUG 14396 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE USER_ID = ?
+2019-12-15 21:26:12.918 DEBUG 14396 --- [http-nio-8080-exec-10] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [9]
+2019-12-15 21:26:12.919 DEBUG 14396 --- [http-nio-8080-exec-7] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE USER_ID = ?
+2019-12-15 21:26:12.919 DEBUG 14396 --- [http-nio-8080-exec-7] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [9]
+2019-12-15 21:26:14.099 DEBUG 14396 --- [http-nio-8080-exec-3] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE USER_ID = ?
+2019-12-15 21:26:14.100 DEBUG 14396 --- [http-nio-8080-exec-3] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [9]
+2019-12-15 21:26:14.113 DEBUG 14396 --- [http-nio-8080-exec-3] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `ORDER_TABLE` WHERE 1 = 1  and `CUSTOMER_ID` = ? 
+2019-12-15 21:26:14.113 DEBUG 14396 --- [http-nio-8080-exec-3] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [9]
+2019-12-15 21:26:16.375 DEBUG 14396 --- [http-nio-8080-exec-7] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1  and `OWNER_ID` = ? 
+2019-12-15 21:26:16.376 DEBUG 14396 --- [http-nio-8080-exec-7] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [9]
+2019-12-15 21:26:16.374 DEBUG 14396 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE USER_ID = ?
+2019-12-15 21:26:16.376 DEBUG 14396 --- [http-nio-8080-exec-5] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [9]
+2019-12-15 21:26:24.551 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE USER_ID = ?
+2019-12-15 21:26:24.551 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [9]
+2019-12-15 21:26:24.554 DEBUG 14396 --- [http-nio-8080-exec-8] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `ORDER_TABLE` WHERE 1 = 1  and `CUSTOMER_ID` = ? 
+2019-12-15 21:26:24.554 DEBUG 14396 --- [http-nio-8080-exec-8] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [9]
+2019-12-15 21:26:28.727 DEBUG 14396 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE USER_ID = ?
+2019-12-15 21:26:28.728 DEBUG 14396 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [9]
+2019-12-15 21:26:28.729 DEBUG 14396 --- [http-nio-8080-exec-7] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `ORDER_TABLE` WHERE 1 = 1  and `CUSTOMER_ID` = ? 
+2019-12-15 21:26:28.729 DEBUG 14396 --- [http-nio-8080-exec-7] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [9]
+2019-12-15 21:26:30.395 DEBUG 14396 --- [http-nio-8080-exec-3] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE USER_ID = ?
+2019-12-15 21:26:30.395 DEBUG 14396 --- [http-nio-8080-exec-3] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [9]
+2019-12-15 21:26:30.395 DEBUG 14396 --- [http-nio-8080-exec-8] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE USER_ID = ?
+2019-12-15 21:26:30.395 DEBUG 14396 --- [http-nio-8080-exec-8] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [9]
+2019-12-15 21:26:39.226 DEBUG 14396 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE USER_ID = ?
+2019-12-15 21:26:39.226 DEBUG 14396 --- [http-nio-8080-exec-4] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [9]
+2019-12-15 21:26:39.227 DEBUG 14396 --- [http-nio-8080-exec-7] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `CAR_TABLE` WHERE 1 = 1  and `OWNER_ID` = ? 
+2019-12-15 21:26:39.227 DEBUG 14396 --- [http-nio-8080-exec-7] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [9]
+2019-12-15 21:26:41.132 DEBUG 14396 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `ORDER_TABLE` WHERE 1 = 1  and `CUSTOMER_ID` = ? 
+2019-12-15 21:26:41.132 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] sql: SELECT * FROM `USER_TABLE` WHERE USER_ID = ?
+2019-12-15 21:26:41.132 DEBUG 14396 --- [http-nio-8080-exec-6] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [9]
+2019-12-15 21:26:41.132 DEBUG 14396 --- [http-nio-8080-exec-2] com.yygq.demo.dao.base.BaseDao           : [execute sql] params: [9]
