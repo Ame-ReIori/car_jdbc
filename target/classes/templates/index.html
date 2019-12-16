@@ -95,7 +95,8 @@
   					<div class="list-group-item active item_article_first">
   						<h3 class="list-group-item-heading">
   							最好的二手车售卖网站
-  						</h3>
+						</h3>
+
 					</div>
   					<!-- 汽车列表 -->
   					<div class="list-group-item item_article">
@@ -213,10 +214,21 @@
 					<div class="col-xs-4">
 						<button  v-on:click="logout" class="btn btn-danger btn-lg">登出</button>
 					</div>
+
   				</div>
   			</div>
+
+			<!--choose car-->
+			<div class="col-xs-3 div_record" id="carChooseBlock">
+
+				<div class="row div_little_func">
+					<div class="col-xs-4">
+						<button  v-on:click="chooseCar" class="btn btn-danger btn-lg" value="Porsche">Porsche</button>
+					</div>
+
+				</div>
+			</div>
 		  </div>
-		
 
 		<!-- 注册模态框 -->
 		<div class="modal fade bs-example-modal-sm" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
@@ -418,7 +430,6 @@
 		}
 	})
 
-
 	/*注册的Vue实例*/
 	var vm_register = new Vue({
 		el: '#registerModal',
@@ -433,7 +444,7 @@
 		},
 		methods:{
 			register: function(){
-				if(this.register_input_usr=="" || this.register_input_pwd=="" || this.register_mail=="" || this.register_phone=="" || this.register_identity_num=="" || this.register_real_name==""){
+				if(this.register_input_usr=="" || this.register_input_pwd=="" || this.register_phone==""){
 					alert('输入不能为空！')
 				}else if(this.register_input_pwd != this.register_vinput_pwd){
 					alert('两次密码输入不一致！')
@@ -553,6 +564,41 @@
 				this.user_balance = this.$cookies.get('user_balance');
 				this.user_mail = this.$cookies.get('user_mail');
 				this.user_phone = this.$cookies.get('user_phone');
+			}
+		}
+	})
+
+	var vm_carChoose = new Vue({
+		el: '#carChooseBlock',
+		data:{
+			carType : "Porsche",
+		},
+		methods:{
+			//登出
+			chooseCar: function(){
+				axios.post('http://localhost:8080/choose_car', {
+					carType: this.carType
+				})
+				.then(response => {
+					var datajson = response.data;
+					console.log(datajson)
+					vm_carinfo.car_model1 = datajson.car_model1;
+					vm_carinfo.car_model2 = datajson.car_model2;
+					vm_carinfo.car_model3 = datajson.car_model3;
+					vm_carinfo.car_model4 = datajson.car_model4;
+					vm_carinfo.car_intro1 = datajson.car_intro1;
+					vm_carinfo.car_intro2 = datajson.car_intro2;
+					vm_carinfo.car_intro3 = datajson.car_intro3;
+					vm_carinfo.car_intro4 = datajson.car_intro4;
+					vm_carinfo.car_id1 = datajson.car_id1;
+					vm_carinfo.car_id2 = datajson.car_id2;
+					vm_carinfo.car_id3 = datajson.car_id3;
+					vm_carinfo.car_id4 = datajson.car_id4;
+					vm_carinfo.car_img1 = datajson.car_img1;
+					vm_carinfo.car_img2 = datajson.car_img2;
+					vm_carinfo.car_img3 = datajson.car_img3;
+					vm_carinfo.car_img4 = datajson.car_img4;
+				})
 			}
 		}
 	})

@@ -104,5 +104,20 @@ public class indexController {
         }
         return dict;
     }
+
+    @RequestMapping("/choose_car")
+    @ResponseBody
+    public Dict chooseCar(@RequestBody Car car){
+        System.out.println(car);
+        Dict dict = Dict.create();
+        List<Car> carList = carService.getCars(car);
+        int listLength = Math.min(carList.size(), 4);
+        for(int i = 1; i <= listLength; i++){
+            Car tmp = carList.get(i - 1);
+            dict.set("car_model" + i, tmp.getCarType()).set("car_intro" + i, "车主电话：" + tmp.getOwnerTel() + '\n' + "价格：" + tmp.getPrice() + '\n' + tmp.getTransferTime() + "手车")
+                    .set("car_id" + i, tmp.getCarId()).set("car_img" + i, "img/detail_car_img/car" + tmp.getCarId() + "_detail.jpg");
+        }
+        return dict;
+    }
 }
 //只有第一页有图。。

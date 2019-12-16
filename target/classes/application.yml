@@ -19,15 +19,15 @@ spring:
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/car?useUnicode=true&characterEncoding=UTF-8&useSSL=false&autoReconnect=true&failOverReadOnly=false&serverTimezone=GMT%2B8
     username: root
-    password: zgah388
+    password: 1/2ss1/2#F00
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.zaxxer.hikari.HikariDataSource
     initialization-mode: always
     continue-on-error: true
     schema:
-      - "classpath:db/schema.sql"
+      - "classpath:db/tables.sql"
     data:
-      - "classpath:db/data.sql"
+      - "classpath:db/simdata.sql"
     hikari:
       minimum-idle: 5
       connection-test-query: SELECT 1 FROM DUAL
